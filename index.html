@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Wedding | Rizwan & Bride</title>
+<meta name="description" content="Wedding invitation and RSVP">
+<style>
+:root{--ink:#2f2723;--gold:#b18a4a;--cream:#fbf7ef;--rose:#eadbd1;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--cream);line-height:1.6}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:linear-gradient(135deg,#fbf7ef,#efe2d7);position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(177,138,74,.35);border-radius:50%;width:420px;height:420px}.hero:before{top:-210px;left:-180px}.hero:after{bottom:-230px;right:-190px}
+.card{position:relative;z-index:1;max-width:760px}.eyebrow{letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-size:13px}.names{font-size:clamp(50px,11vw,100px);font-weight:normal;line-height:1;margin:25px 0;color:#352b27}.amp{font-size:.55em;color:var(--gold);font-style:italic}.date{font-size:24px;letter-spacing:3px}.place{margin-top:8px;color:#6e5b51}.btn{display:inline-block;margin-top:30px;padding:14px 28px;border:1px solid var(--gold);color:var(--ink);text-decoration:none;border-radius:30px;background:rgba(255,255,255,.45);transition:.25s}.btn:hover{background:var(--gold);color:white}
+section{padding:80px 20px;max-width:1000px;margin:auto}.title{text-align:center;font-size:38px;font-weight:normal;margin:0 0 15px}.subtitle{text-align:center;color:#806f66;margin-bottom:45px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:650px;margin:35px auto}.time{background:white;border:1px solid #e5d6ca;padding:18px 8px;text-align:center}.time strong{display:block;font-size:32px;color:var(--gold)}.time span{font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.details{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.detail{background:white;padding:28px;text-align:center;border:1px solid #eaded5}.detail h3{color:var(--gold);font-size:14px;letter-spacing:2px;text-transform:uppercase}
+.timeline{max-width:700px;margin:auto}.event{display:flex;gap:25px;padding:20px 0;border-bottom:1px solid #dfd1c7}.event b{min-width:120px;color:var(--gold)}
+.rsvp{background:#eee1d7;max-width:none}.rsvp-inner{max-width:700px;margin:auto}form{display:grid;gap:15px}input,select,textarea{width:100%;padding:14px;border:1px solid #d8c7bb;background:white;font:inherit;color:var(--ink);border-radius:3px}textarea{min-height:110px}.submit{border:0;background:var(--gold);color:#fff;padding:15px;border-radius:30px;font:inherit;cursor:pointer}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.photo{aspect-ratio:1;background:linear-gradient(135deg,#dfd0c6,#f7eee8);display:flex;align-items:center;justify-content:center;color:#8a756a;text-align:center;padding:20px}
+footer{text-align:center;padding:45px 20px;background:#302722;color:#eee1d7}.small{font-size:13px;opacity:.75}
+@media(max-width:650px){.details,.gallery{grid-template-columns:1fr}.countdown{grid-template-columns:repeat(2,1fr)}section{padding:60px 18px}.names{font-size:58px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="card">
+    <div class="eyebrow">Together with our families</div>
+    <div class="names">Rizwan <span class="amp">&amp;</span> Bride</div>
+    <div class="date">22 MAY 2027</div>
+    <div class="place">Riyadh, Saudi Arabia</div>
+    <a class="btn" href="#rsvp">Kindly RSVP</a>
+  </div>
+</header>
+
+<section>
+  <h2 class="title">Our Wedding Day</h2>
+  <p class="subtitle">We would be delighted to celebrate this special day with you.</p>
+  <div id="countdown" class="countdown">
+    <div class="time"><strong id="days">--</strong><span>Days</span></div>
+    <div class="time"><strong id="hours">--</strong><span>Hours</span></div>
+    <div class="time"><strong id="minutes">--</strong><span>Minutes</span></div>
+    <div class="time"><strong id="seconds">--</strong><span>Seconds</span></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">The Details</h2>
+  <p class="subtitle">Please save the date.</p>
+  <div class="details">
+    <div class="detail"><h3>Date</h3><p>Saturday<br><strong>22 May 2027</strong></p></div>
+    <div class="detail"><h3>Location</h3><p>Wedding Venue<br><strong>Riyadh, Saudi Arabia</strong></p></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Celebration</h2>
+  <p class="subtitle">Schedule</p>
+  <div class="timeline">
+    <div class="event"><b>06:00 PM</b><span>Guest arrival</span></div>
+    <div class="event"><b>07:00 PM</b><span>Wedding ceremony</span></div>
+    <div class="event"><b>08:00 PM</b><span>Reception &amp; dinner</span></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Our Memories</h2>
+  <p class="subtitle">Photos can be added here.</p>
+  <div class="gallery">
+    <div class="photo">Photo 1</div><div class="photo">Photo 2</div><div class="photo">Photo 3</div>
+  </div>
+</section>
+
+<section id="rsvp" class="rsvp">
+  <div class="rsvp-inner">
+    <h2 class="title">RSVP</h2>
+    <p class="subtitle">Please let us know if you can join us.</p>
+    <form id="rsvpForm">
+      <input name="name" placeholder="Your full name" required>
+      <select name="attendance" required><option value="">Will you attend?</option><option>Yes, happily!</option><option>Sorry, I can't attend</option></select>
+      <input name="guests" type="number" min="1" max="20" placeholder="Number of guests" required>
+      <input name="phone" placeholder="Phone / WhatsApp (optional)">
+      <textarea name="message" placeholder="A message for the couple (optional)"></textarea>
+      <button class="submit" type="submit">Send RSVP</button>
+    </form>
+    <p id="success" style="display:none;text-align:center;margin-top:20px">Thank you! Your RSVP has been recorded. ❤️</p>
+    <p class="small" style="text-align:center;margin-top:15px">RSVP form is ready to connect to Google Forms/Sheets.</p>
+  </div>
+</section>
+
+<footer>
+  <div>Rizwan &amp; Bride</div>
+  <div class="small">With love, we look forward to celebrating with you.</div>
+</footer>
+
+<script>
+const wedding = new Date("2027-05-22T18:00:00+03:00").getTime();
+function tick(){
+ const d=Math.max(0,wedding-Date.now()), s=Math.floor(d/1000);
+ document.getElementById("days").textContent=Math.floor(s/86400);
+ document.getElementById("hours").textContent=Math.floor(s%86400/3600);
+ document.getElementById("minutes").textContent=Math.floor(s%3600/60);
+ document.getElementById("seconds").textContent=s%60;
+}
+tick();setInterval(tick,1000);
+document.getElementById("rsvpForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ document.getElementById("success").style.display="block";
+ e.target.reset();
+});
+</script>
+</body>
+</html>
