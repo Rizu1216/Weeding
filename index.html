@@ -1706,21 +1706,32 @@ function openInvitation() {
     opening.style.visibility = "hidden";
 
 
-    /* Automatically scroll to invitation */
+    /* Automatically start slow scrolling */
 
     setTimeout(function() {
 
-        document
-            .getElementById("invitation")
-            .scrollIntoView({
+        let scrollSpeed = 0.6;
 
-                behavior: "smooth",
+        function slowAutoScroll() {
 
-                block: "start"
+            window.scrollBy(0, scrollSpeed);
 
-            });
+            if (
+                window.innerHeight + window.scrollY <
+                document.documentElement.scrollHeight
+            ) {
 
-    }, 600);
+                requestAnimationFrame(
+                    slowAutoScroll
+                );
+
+            }
+
+        }
+
+        slowAutoScroll();
+
+    }, 1000);
 
 }
 
