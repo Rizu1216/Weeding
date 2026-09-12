@@ -78,6 +78,7 @@ body::after{
     background-size:70px 70px;
 }
 
+
 /* ================================================= */
 /*                 ENVELOPE OPENING                  */
 /* ================================================= */
@@ -139,7 +140,10 @@ body::after{
     animation:fadeDown 1.7s ease;
 }
 
-/* ENVELOPE */
+
+/* ================================================= */
+/*                    ENVELOPE                      */
+/* ================================================= */
 
 .envelope-area{
     position:relative;
@@ -161,7 +165,10 @@ body::after{
     drop-shadow(0 30px 35px rgba(0,0,0,0.55));
 }
 
-/* LETTER INSIDE */
+
+/* ================================================= */
+/*                    LETTER                        */
+/* ================================================= */
 
 .letter{
     position:absolute;
@@ -196,28 +203,72 @@ body::after{
     transition:
         transform 1.4s cubic-bezier(.22,.61,.36,1),
         top 1.4s cubic-bezier(.22,.61,.36,1);
+
+    padding:15px;
 }
 
 .letter-small{
     font-size:8px;
     letter-spacing:3px;
     text-transform:uppercase;
-    margin-bottom:8px;
+    margin-bottom:7px;
 }
 
 .letter-names{
     font-family:'Cormorant Garamond',serif;
     font-size:27px;
     color:#876d2e;
+    line-height:1;
 }
+
+
+/* ================================================= */
+/*             FAMILY DETAILS ON LETTER             */
+/* ================================================= */
+
+.letter-family{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:12px;
+
+    line-height:1.25;
+
+    letter-spacing:.3px;
+
+    color:#6f5b2b;
+
+    margin-top:8px;
+
+    text-align:center;
+}
+
+.letter-family span{
+    display:block;
+
+    font-size:13px;
+
+    color:#a27d35;
+
+    margin:1px 0;
+}
+
+
+/* DATE */
 
 .letter-date{
     margin-top:8px;
-    font-size:9px;
+
+    font-size:8px;
+
     letter-spacing:2px;
+
+    color:#725b29;
 }
 
-/* ENVELOPE BACK */
+
+/* ================================================= */
+/*                ENVELOPE BACK                     */
+/* ================================================= */
 
 .envelope-back{
     position:absolute;
@@ -242,7 +293,8 @@ body::after{
     );
 }
 
-/* LEFT / RIGHT ENVELOPE FOLDS */
+
+/* LEFT FOLD */
 
 .envelope-left{
     position:absolute;
@@ -266,6 +318,9 @@ body::after{
     border-left:1px solid rgba(219,184,96,.7);
 }
 
+
+/* RIGHT FOLD */
+
 .envelope-right{
     position:absolute;
     inset:0;
@@ -287,6 +342,7 @@ body::after{
 
     border-right:1px solid rgba(219,184,96,.7);
 }
+
 
 /* BOTTOM FLAP */
 
@@ -311,6 +367,7 @@ body::after{
 
     border-bottom:1px solid rgba(219,184,96,.75);
 }
+
 
 /* TOP FLAP */
 
@@ -345,7 +402,8 @@ body::after{
     transform:rotateX(180deg);
 }
 
-/* GOLD EDGE */
+
+/* GOLD BORDER */
 
 .envelope-gold-line{
     position:absolute;
@@ -358,7 +416,10 @@ body::after{
     pointer-events:none;
 }
 
-/* WAX SEAL */
+
+/* ================================================= */
+/*                    WAX SEAL                      */
+/* ================================================= */
 
 .wax-seal{
     position:absolute;
@@ -390,6 +451,7 @@ body::after{
     inset 0 2px 4px rgba(255,255,255,.35);
 
     display:flex;
+
     justify-content:center;
     align-items:center;
 
@@ -398,6 +460,9 @@ body::after{
     transition:
         transform .8s ease,
         opacity .6s ease;
+
+    animation:
+        sealPulse 2.2s ease-in-out infinite;
 }
 
 .wax-seal::before{
@@ -406,6 +471,7 @@ body::after{
     font-family:'Cormorant Garamond',serif;
 
     font-size:17px;
+
     font-weight:700;
 
     color:#284331;
@@ -418,7 +484,9 @@ body::after{
     border-radius:50%;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 }
 
@@ -429,12 +497,18 @@ body::after{
         rotate(25deg);
 
     opacity:0;
+
+    animation:none;
 }
 
-/* OPEN TEXT */
+
+/* ================================================= */
+/*                    OPEN TEXT                     */
+/* ================================================= */
 
 .open-instruction{
     font-family:'Cormorant Garamond',serif;
+
     font-size:23px;
 
     color:#e6ce91;
@@ -447,12 +521,14 @@ body::after{
 
 .open-sub{
     font-size:9px;
+
     letter-spacing:3px;
 
     text-transform:uppercase;
 
     color:#aaa58e;
 }
+
 
 /* OPEN BUTTON */
 
@@ -478,6 +554,7 @@ body::after{
     font-family:'Montserrat',sans-serif;
 
     font-size:10px;
+
     font-weight:600;
 
     letter-spacing:2px;
@@ -506,6 +583,7 @@ body::after{
     margin-top:30px;
 
     font-size:9px;
+
     letter-spacing:2px;
 
     color:#817b68;
@@ -513,10 +591,14 @@ body::after{
     text-transform:uppercase;
 }
 
-/* ENVELOPE OPEN ANIMATION */
+
+/* ================================================= */
+/*              ENVELOPE OPEN EFFECT                */
+/* ================================================= */
 
 .envelope.open .letter{
     top:-75px;
+
     transform:scale(1.08);
 
     z-index:4;
@@ -526,8 +608,9 @@ body::after{
     animation:none;
 }
 
+
 /* ================================================= */
-/*                  MAIN INVITATION                  */
+/*                MAIN INVITATION                   */
 /* ================================================= */
 
 #invitation{
@@ -606,7 +689,10 @@ body::after{
     border-right:1px solid;
 }
 
-/* HERO */
+
+/* ================================================= */
+/*                     HERO                         */
+/* ================================================= */
 
 .hero{
     text-align:center;
@@ -678,7 +764,10 @@ body::after{
     color:#bfb99e;
 }
 
-/* DIVIDER */
+
+/* ================================================= */
+/*                    DIVIDER                       */
+/* ================================================= */
 
 .divider{
     display:flex;
@@ -719,8 +808,9 @@ body::after{
     );
 }
 
+
 /* ================================================= */
-/*                  SCRATCH CARD                     */
+/*                  SCRATCH CARD                    */
 /* ================================================= */
 
 .scratch-section{
@@ -888,6 +978,7 @@ body::after{
     text-transform:uppercase;
 }
 
+
 /* ================================================= */
 /*                    DETAILS                       */
 /* ================================================= */
@@ -959,6 +1050,7 @@ body::after{
     color:#bcb79f;
 }
 
+
 /* ================================================= */
 /*                  COUNTDOWN                       */
 /* ================================================= */
@@ -1027,7 +1119,10 @@ body::after{
     color:#aaa58e;
 }
 
-/* BUTTON */
+
+/* ================================================= */
+/*                    BUTTON                        */
+/* ================================================= */
 
 .buttons{
     text-align:center;
@@ -1067,7 +1162,10 @@ body::after{
     color:#09251c;
 }
 
-/* FOOTER */
+
+/* ================================================= */
+/*                    FOOTER                        */
+/* ================================================= */
 
 .footer{
     text-align:center;
@@ -1095,6 +1193,7 @@ body::after{
     margin-top:22px;
 }
 
+
 /* ================================================= */
 /*                    ANIMATIONS                    */
 /* ================================================= */
@@ -1107,6 +1206,21 @@ body::after{
 
     50%{
         transform:translateY(-8px);
+    }
+}
+
+@keyframes sealPulse{
+
+    0%,100%{
+        box-shadow:
+        0 5px 15px rgba(0,0,0,.5),
+        0 0 0 0 rgba(225,196,119,.25);
+    }
+
+    50%{
+        box-shadow:
+        0 5px 20px rgba(0,0,0,.6),
+        0 0 0 10px rgba(225,196,119,0);
     }
 }
 
@@ -1133,6 +1247,7 @@ body::after{
         transform:translateY(0);
     }
 }
+
 
 /* ================================================= */
 /*                    MOBILE                        */
@@ -1161,6 +1276,28 @@ body::after{
         height:220px;
     }
 
+    .letter{
+        padding:12px;
+    }
+
+    .letter-names{
+        font-size:24px;
+    }
+
+    .letter-family{
+        font-size:10px;
+        margin-top:6px;
+    }
+
+    .letter-family span{
+        font-size:11px;
+    }
+
+    .letter-date{
+        font-size:7px;
+        margin-top:6px;
+    }
+
     .wax-seal{
         width:64px;
         height:64px;
@@ -1171,10 +1308,6 @@ body::after{
         height:46px;
 
         font-size:15px;
-    }
-
-    .letter-names{
-        font-size:24px;
     }
 
     .open-instruction{
@@ -1238,6 +1371,7 @@ body::after{
     }
 }
 
+
 @media(max-width:380px){
 
     .envelope-area{
@@ -1261,7 +1395,9 @@ body::after{
 </style>
 </head>
 
+
 <body>
+
 
 <!-- ================================================= -->
 <!--              PREMIUM ENVELOPE OPENING            -->
@@ -1279,20 +1415,40 @@ body::after{
             A Special Invitation For You
         </div>
 
+
         <div class="envelope-area">
 
             <div class="envelope" id="envelope">
 
-                <!-- LETTER -->
+
+                <!-- LETTER INSIDE ENVELOPE -->
+
                 <div class="letter">
 
                     <div class="letter-small">
                         Walima Celebration
                     </div>
 
+
                     <div class="letter-names">
                         Rizwan & Nabila
                     </div>
+
+
+                    <!-- FAMILY DETAILS ADDED -->
+
+                    <div class="letter-family">
+
+                        Son of Muqeem Ansari
+
+                        <span>
+                            &
+                        </span>
+
+                        Daughter of Khaja Ansari
+
+                    </div>
+
 
                     <div class="letter-date">
                         15 MARCH 2027
@@ -1300,32 +1456,47 @@ body::after{
 
                 </div>
 
+
                 <!-- ENVELOPE BACK -->
+
                 <div class="envelope-back"></div>
 
+
                 <!-- SIDE FOLDS -->
+
                 <div class="envelope-left"></div>
+
                 <div class="envelope-right"></div>
 
-                <!-- BOTTOM -->
+
+                <!-- BOTTOM FLAP -->
+
                 <div class="envelope-bottom"></div>
 
+
                 <!-- TOP FLAP -->
+
                 <div class="envelope-flap"></div>
 
+
                 <!-- GOLD BORDER -->
+
                 <div class="envelope-gold-line"></div>
 
+
                 <!-- WAX SEAL -->
+
                 <div
                     class="wax-seal"
                     id="waxSeal"
                     onclick="openInvitation()">
                 </div>
 
+
             </div>
 
         </div>
+
 
         <div class="open-instruction">
             Tap the seal to open
@@ -1335,6 +1506,7 @@ body::after{
             You are respectfully invited
         </div>
 
+
         <button
             class="open-btn"
             onclick="openInvitation()">
@@ -1343,6 +1515,7 @@ body::after{
 
         </button>
 
+
         <div class="opening-footer">
             Rizwan Ansari &nbsp; • &nbsp; Nabila Ansari
         </div>
@@ -1350,6 +1523,7 @@ body::after{
     </div>
 
 </div>
+
 
 
 <!-- ================================================= -->
@@ -1374,21 +1548,26 @@ body::after{
 بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
 </div>
 
+
 <h1>
 Rizwan Ansari
 </h1>
+
 
 <div class="and">
 &
 </div>
 
+
 <h1>
 Nabila Ansari
 </h1>
 
+
 <div class="subtitle">
 WALIMA CELEBRATION
 </div>
+
 
 <p class="hero-description">
 
@@ -1406,6 +1585,7 @@ beginning together with our family and loved ones.
 </div>
 
 
+
 <!-- ================================================= -->
 <!--                  SCRATCH CARD                    -->
 <!-- ================================================= -->
@@ -1415,6 +1595,7 @@ beginning together with our family and loved ones.
 <h2 class="scratch-heading">
 A Little Surprise
 </h2>
+
 
 <p class="scratch-subtitle">
 Scratch gently to reveal the date
@@ -1429,13 +1610,16 @@ Scratch gently to reveal the date
 Our Walima
 </div>
 
+
 <div class="reveal-date">
 15 MARCH 2027
 </div>
 
+
 <div class="reveal-time">
 7:00 PM
 </div>
+
 
 <div class="reveal-name">
 Rizwan Ansari & Nabila Ansari
@@ -1446,13 +1630,16 @@ Rizwan Ansari & Nabila Ansari
 
 <canvas id="scratchCanvas"></canvas>
 
+
 <div class="scratch-hint">
 Scratch Here ✦
 </div>
 
+
 </div>
 
 </section>
+
 
 
 <!-- ================================================= -->
@@ -1460,6 +1647,7 @@ Scratch Here ✦
 <!-- ================================================= -->
 
 <div class="details">
+
 
 <div class="card">
 
@@ -1513,7 +1701,9 @@ Karnataka, India
 
 </div>
 
+
 </div>
+
 
 
 <!-- ================================================= -->
@@ -1524,29 +1714,64 @@ Karnataka, India
 The Celebration Begins In
 </h2>
 
+
 <div class="countdown">
 
-<div class="time-box">
-<span id="days">0</span>
-<small>Days</small>
-</div>
 
 <div class="time-box">
-<span id="hours">0</span>
-<small>Hours</small>
+
+<span id="days">
+0
+</span>
+
+<small>
+Days
+</small>
+
 </div>
+
 
 <div class="time-box">
-<span id="minutes">0</span>
-<small>Minutes</small>
+
+<span id="hours">
+0
+</span>
+
+<small>
+Hours
+</small>
+
 </div>
+
 
 <div class="time-box">
-<span id="seconds">0</span>
-<small>Seconds</small>
-</div>
+
+<span id="minutes">
+0
+</span>
+
+<small>
+Minutes
+</small>
 
 </div>
+
+
+<div class="time-box">
+
+<span id="seconds">
+0
+</span>
+
+<small>
+Seconds
+</small>
+
+</div>
+
+
+</div>
+
 
 
 <!-- ================================================= -->
@@ -1567,6 +1792,7 @@ target="_blank">
 </div>
 
 
+
 <!-- ================================================= -->
 <!--                     FOOTER                      -->
 <!-- ================================================= -->
@@ -1577,14 +1803,17 @@ target="_blank">
 Your presence will make our celebration even more meaningful.
 </p>
 
+
 <p>
 May Allah bless this new beginning with love,
 happiness and barakah.
 </p>
 
+
 <div class="footer-signature">
 Rizwan & Nabila
 </div>
+
 
 <div style="margin-top:10px;">
 ✦
@@ -1595,6 +1824,7 @@ Rizwan & Nabila
 
 </div>
 </div>
+
 
 
 <!-- ================================================= -->
@@ -1613,13 +1843,16 @@ type="audio/mpeg">
 </audio>
 
 
+
 <script>
+
 
 /* ================================================= */
 /*              OPEN ENVELOPE                       */
 /* ================================================= */
 
 let invitationOpened = false;
+
 
 function openInvitation(){
 
@@ -1629,11 +1862,14 @@ function openInvitation(){
 
     invitationOpened = true;
 
+
     const opening =
         document.getElementById("opening");
 
+
     const envelope =
         document.getElementById("envelope");
+
 
     const music =
         document.getElementById("weddingMusic");
@@ -1661,7 +1897,7 @@ function openInvitation(){
     envelope.classList.add("open");
 
 
-    /* WAIT FOR ANIMATION */
+    /* WAIT FOR ENVELOPE ANIMATION */
 
     setTimeout(function(){
 
@@ -1676,12 +1912,14 @@ function openInvitation(){
 
         let scrollSpeed = 2.0;
 
+
         function slowAutoScroll(){
 
             window.scrollBy(
                 0,
                 scrollSpeed
             );
+
 
             if(
                 window.innerHeight +
@@ -1697,11 +1935,13 @@ function openInvitation(){
 
         }
 
+
         slowAutoScroll();
 
     },3200);
 
 }
+
 
 
 /* ================================================= */
@@ -1719,19 +1959,24 @@ function updateCountdown(){
     const now =
         new Date().getTime();
 
+
     const distance =
         weddingDate - now;
 
 
     if(distance <= 0){
 
-        document.getElementById("days").innerText = "0";
+        document.getElementById("days")
+            .innerText = "0";
 
-        document.getElementById("hours").innerText = "0";
+        document.getElementById("hours")
+            .innerText = "0";
 
-        document.getElementById("minutes").innerText = "0";
+        document.getElementById("minutes")
+            .innerText = "0";
 
-        document.getElementById("seconds").innerText = "0";
+        document.getElementById("seconds")
+            .innerText = "0";
 
         return;
 
@@ -1786,10 +2031,12 @@ function updateCountdown(){
 
 updateCountdown();
 
+
 setInterval(
     updateCountdown,
     1000
 );
+
 
 
 /* ================================================= */
@@ -1801,10 +2048,12 @@ const canvas =
         "scratchCanvas"
     );
 
+
 const scratchCard =
     document.querySelector(
         ".scratch-card"
     );
+
 
 const ctx =
     canvas.getContext("2d");
@@ -1815,12 +2064,13 @@ let isScratching = false;
 let scratched = 0;
 
 
-/* SETUP SCRATCH */
+/* SETUP SCRATCH CARD */
 
 function setupScratchCard(){
 
     const rect =
         scratchCard.getBoundingClientRect();
+
 
     const dpr =
         window.devicePixelRatio || 1;
@@ -1829,12 +2079,14 @@ function setupScratchCard(){
     canvas.width =
         rect.width * dpr;
 
+
     canvas.height =
         rect.height * dpr;
 
 
     canvas.style.width =
         rect.width + "px";
+
 
     canvas.style.height =
         rect.height + "px";
@@ -1850,6 +2102,15 @@ function setupScratchCard(){
     );
 
 
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    ctx.globalAlpha = 1;
+
+
+    /* GOLD SCRATCH SURFACE */
+
     const gradient =
         ctx.createLinearGradient(
             0,
@@ -1864,20 +2125,24 @@ function setupScratchCard(){
         "#b28b3c"
     );
 
+
     gradient.addColorStop(
         0.25,
         "#e7cf8c"
     );
+
 
     gradient.addColorStop(
         0.5,
         "#c19c4d"
     );
 
+
     gradient.addColorStop(
         0.75,
         "#eed99a"
     );
+
 
     gradient.addColorStop(
         1,
@@ -1885,13 +2150,9 @@ function setupScratchCard(){
     );
 
 
-    ctx.globalCompositeOperation =
-        "source-over";
-
-    ctx.globalAlpha = 1;
-
     ctx.fillStyle =
         gradient;
+
 
     ctx.fillRect(
         0,
@@ -1901,7 +2162,7 @@ function setupScratchCard(){
     );
 
 
-    /* GOLD LINES */
+    /* DIAGONAL LINES */
 
     ctx.globalAlpha = 0.18;
 
@@ -1914,20 +2175,25 @@ function setupScratchCard(){
 
         ctx.beginPath();
 
+
         ctx.moveTo(
             x,
             0
         );
+
 
         ctx.lineTo(
             x + rect.height,
             rect.height
         );
 
+
         ctx.strokeStyle =
             "#fff4c7";
 
+
         ctx.lineWidth = 1;
+
 
         ctx.stroke();
 
@@ -1937,16 +2203,19 @@ function setupScratchCard(){
     ctx.globalAlpha = 1;
 
 
-    /* TEXT */
+    /* SCRATCH TEXT */
 
     ctx.fillStyle =
         "#4f3d18";
 
+
     ctx.font =
         "600 13px Montserrat, sans-serif";
 
+
     ctx.textAlign =
         "center";
+
 
     ctx.textBaseline =
         "middle";
@@ -1972,7 +2241,10 @@ function setupScratchCard(){
 }
 
 
-/* SCRATCH FUNCTION */
+
+/* ================================================= */
+/*                SCRATCH FUNCTION                   */
+/* ================================================= */
 
 function scratch(e){
 
@@ -1998,6 +2270,7 @@ function scratch(e){
             e.touches[0].clientX -
             rect.left;
 
+
         y =
             e.touches[0].clientY -
             rect.top;
@@ -2008,6 +2281,7 @@ function scratch(e){
         x =
             e.clientX -
             rect.left;
+
 
         y =
             e.clientY -
@@ -2022,6 +2296,7 @@ function scratch(e){
 
     ctx.beginPath();
 
+
     ctx.arc(
         x,
         y,
@@ -2029,6 +2304,7 @@ function scratch(e){
         0,
         Math.PI * 2
     );
+
 
     ctx.fill();
 
@@ -2045,7 +2321,10 @@ function scratch(e){
 }
 
 
-/* MOUSE */
+
+/* ================================================= */
+/*                    MOUSE                         */
+/* ================================================= */
 
 canvas.addEventListener(
     "mousedown",
@@ -2083,7 +2362,10 @@ canvas.addEventListener(
 );
 
 
-/* TOUCH */
+
+/* ================================================= */
+/*                     TOUCH                        */
+/* ================================================= */
 
 canvas.addEventListener(
     "touchstart",
@@ -2127,14 +2409,19 @@ canvas.addEventListener(
 );
 
 
-/* REVEAL SCRATCH */
+
+/* ================================================= */
+/*               REVEAL SCRATCH CARD                 */
+/* ================================================= */
 
 function revealScratchCard(){
 
     canvas.style.transition =
         "opacity 0.8s ease";
 
-    canvas.style.opacity = "0";
+
+    canvas.style.opacity =
+        "0";
 
 
     setTimeout(function(){
@@ -2147,7 +2434,10 @@ function revealScratchCard(){
 }
 
 
-/* LOAD */
+
+/* ================================================= */
+/*                     LOAD                         */
+/* ================================================= */
 
 window.addEventListener(
     "load",
@@ -2155,12 +2445,16 @@ window.addEventListener(
 );
 
 
-/* RESIZE */
+
+/* ================================================= */
+/*                    RESIZE                        */
+/* ================================================= */
 
 window.addEventListener(
     "resize",
     setupScratchCard
 );
+
 
 </script>
 
