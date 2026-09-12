@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Rizwan Ansari & Nabila Ansari | Walima Invitation</title>
 
 <meta name="description"
 content="Walima invitation of Rizwan Ansari and Nabila Ansari - 15 March 2027">
 
+
 <style>
 
-/* =========================================================
+/* =====================================================
    PREMIUM ISLAMIC WALIMA INVITATION
-   ========================================================= */
+   ===================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
 
 * {
     margin: 0;
@@ -23,44 +28,58 @@ content="Walima invitation of Rizwan Ansari and Nabila Ansari - 15 March 2027">
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
+
     background: #071d18;
+
     color: #e8d39a;
+
     font-family: 'Montserrat', sans-serif;
+
     overflow-x: hidden;
 }
 
 
-/* =========================================================
+/* =====================================================
    PREMIUM BACKGROUND
-   ========================================================= */
+   ===================================================== */
 
 body::before {
+
     content: "";
+
     position: fixed;
+
     inset: 0;
+
     z-index: -2;
 
     background:
+
         radial-gradient(
             circle at 50% 15%,
             rgba(197,163,79,0.13),
             transparent 28%
         ),
+
         radial-gradient(
             circle at 10% 90%,
             rgba(197,163,79,0.08),
             transparent 25%
         ),
+
         radial-gradient(
             circle at 90% 70%,
             rgba(197,163,79,0.06),
             transparent 25%
         ),
+
         linear-gradient(
             135deg,
             #03130f 0%,
@@ -70,15 +89,23 @@ body::before {
         );
 }
 
+
 body::after {
+
     content: "";
+
     position: fixed;
+
     inset: 0;
+
     z-index: -1;
-    opacity: 0.14;
+
+    opacity: 0.12;
+
     pointer-events: none;
 
     background-image:
+
         linear-gradient(
             45deg,
             transparent 48%,
@@ -86,6 +113,7 @@ body::after {
             rgba(224,196,118,0.4) 51%,
             transparent 52%
         ),
+
         linear-gradient(
             -45deg,
             transparent 48%,
@@ -98,22 +126,28 @@ body::after {
 }
 
 
-/* =========================================================
+/* =====================================================
    OPENING SCREEN
-   ========================================================= */
+   ===================================================== */
 
 #opening {
+
     position: fixed;
+
     inset: 0;
+
     z-index: 9999;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     text-align: center;
 
     background:
+
         radial-gradient(
             circle at center,
             #124c3d 0%,
@@ -126,16 +160,19 @@ body::after {
         visibility 1.2s ease;
 }
 
+
 .opening-box {
 
     width: 90%;
+
     max-width: 680px;
 
     padding: 65px 30px;
 
     position: relative;
 
-    border: 1px solid rgba(225,196,119,0.8);
+    border:
+        1px solid rgba(225,196,119,0.8);
 
     background:
         linear-gradient(
@@ -145,15 +182,19 @@ body::after {
         );
 
     box-shadow:
-        0 0 0 8px rgba(218,183,91,0.035),
-        0 0 0 16px rgba(218,183,91,0.02),
-        0 30px 80px rgba(0,0,0,0.5);
+
+        0 0 0 8px
+        rgba(218,183,91,0.035),
+
+        0 0 0 16px
+        rgba(218,183,91,0.02),
+
+        0 30px 80px
+        rgba(0,0,0,0.5);
 
     backdrop-filter: blur(5px);
 }
 
-
-/* Decorative corners */
 
 .opening-box::before,
 .opening-box::after {
@@ -163,35 +204,42 @@ body::after {
     position: absolute;
 
     width: 55px;
+
     height: 55px;
 
     border-color: #d9b867;
 }
 
+
 .opening-box::before {
 
     top: 12px;
+
     left: 12px;
 
     border-top: 1px solid;
+
     border-left: 1px solid;
 }
+
 
 .opening-box::after {
 
     bottom: 12px;
+
     right: 12px;
 
     border-bottom: 1px solid;
+
     border-right: 1px solid;
 }
 
 
-/* Crescent */
-
 .crescent {
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family:
+        'Cormorant Garamond',
+        serif;
 
     font-size: 64px;
 
@@ -200,17 +248,19 @@ body::after {
     margin-bottom: 15px;
 
     text-shadow:
-        0 0 20px rgba(226,196,119,0.25);
+        0 0 20px
+        rgba(226,196,119,0.25);
 }
 
 
-/* Opening title */
-
 .opening-box h1 {
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family:
+        'Cormorant Garamond',
+        serif;
 
-    font-size: clamp(38px, 8vw, 68px);
+    font-size:
+        clamp(38px, 8vw, 68px);
 
     line-height: 1.02;
 
@@ -224,11 +274,11 @@ body::after {
 }
 
 
-/* Opening text */
-
 .opening-box p {
 
-    font-family: 'Montserrat', sans-serif;
+    font-family:
+        'Montserrat',
+        sans-serif;
 
     font-size: 12px;
 
@@ -246,13 +296,13 @@ body::after {
 }
 
 
-/* Open button */
-
 .open-btn {
 
-    border: 1px solid #d9b867;
+    border:
+        1px solid #d9b867;
 
     background:
+
         linear-gradient(
             135deg,
             #b9954b,
@@ -266,7 +316,9 @@ body::after {
 
     border-radius: 2px;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family:
+        'Montserrat',
+        sans-serif;
 
     font-size: 12px;
 
@@ -279,25 +331,23 @@ body::after {
     cursor: pointer;
 
     box-shadow:
-        0 12px 30px rgba(0,0,0,0.35);
+        0 12px 30px
+        rgba(0,0,0,0.35);
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        transform 0.3s ease;
 }
+
 
 .open-btn:hover {
 
     transform: translateY(-2px);
-
-    box-shadow:
-        0 16px 35px rgba(0,0,0,0.45);
 }
 
 
-/* =========================================================
+/* =====================================================
    MAIN INVITATION
-   ========================================================= */
+   ===================================================== */
 
 #invitation {
 
@@ -307,6 +357,7 @@ body::after {
         35px 15px 80px;
 
     background:
+
         radial-gradient(
             circle at 50% 0%,
             rgba(202,171,91,0.08),
@@ -325,9 +376,12 @@ body::after {
 
     padding: 28px;
 
-    border: 1px solid rgba(218,183,91,0.65);
+    border:
+        1px solid
+        rgba(218,183,91,0.65);
 
     background:
+
         linear-gradient(
             145deg,
             rgba(255,255,255,0.018),
@@ -335,64 +389,78 @@ body::after {
         );
 
     box-shadow:
-        0 30px 90px rgba(0,0,0,0.35);
+        0 30px 90px
+        rgba(0,0,0,0.35);
 }
 
 
-/* =========================================================
-   DECORATIVE FRAME
-   ========================================================= */
+/* =====================================================
+   DECORATIVE CORNERS
+   ===================================================== */
 
 .corner {
 
     position: absolute;
 
     width: 52px;
+
     height: 52px;
 
     border-color: #d9b867;
 }
 
+
 .corner.tl {
 
     top: 10px;
+
     left: 10px;
 
     border-top: 1px solid;
+
     border-left: 1px solid;
 }
+
 
 .corner.tr {
 
     top: 10px;
+
     right: 10px;
 
     border-top: 1px solid;
+
     border-right: 1px solid;
 }
+
 
 .corner.bl {
 
     bottom: 10px;
+
     left: 10px;
 
     border-bottom: 1px solid;
+
     border-left: 1px solid;
 }
+
 
 .corner.br {
 
     bottom: 10px;
+
     right: 10px;
 
     border-bottom: 1px solid;
+
     border-right: 1px solid;
 }
 
 
-/* =========================================================
+/* =====================================================
    HERO
-   ========================================================= */
+   ===================================================== */
 
 .hero {
 
@@ -405,7 +473,9 @@ body::after {
 
 .bismillah {
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family:
+        'Cormorant Garamond',
+        serif;
 
     font-size: 28px;
 
@@ -417,9 +487,12 @@ body::after {
 
 .hero h1 {
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family:
+        'Cormorant Garamond',
+        serif;
 
-    font-size: clamp(46px, 10vw, 82px);
+    font-size:
+        clamp(46px, 10vw, 82px);
 
     line-height: 0.95;
 
@@ -435,7 +508,9 @@ body::after {
 
 .and {
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family:
+        'Cormorant Garamond',
+        serif;
 
     font-size: 28px;
 
@@ -447,7 +522,9 @@ body::after {
 
 .subtitle {
 
-    font-family: 'Montserrat', sans-serif;
+    font-family:
+        'Montserrat',
+        sans-serif;
 
     font-size: 11px;
 
@@ -478,9 +555,9 @@ body::after {
 }
 
 
-/* =========================================================
-   SECTION DIVIDER
-   ========================================================= */
+/* =====================================================
+   DIVIDER
+   ===================================================== */
 
 .divider {
 
@@ -492,10 +569,12 @@ body::after {
 
     gap: 15px;
 
-    margin: 15px 0 40px;
+    margin:
+        15px 0 40px;
 
     color: #c8a95d;
 }
+
 
 .divider::before,
 .divider::after {
@@ -507,6 +586,7 @@ body::after {
     width: 100px;
 
     background:
+
         linear-gradient(
             to right,
             transparent,
@@ -514,9 +594,11 @@ body::after {
         );
 }
 
+
 .divider::after {
 
     background:
+
         linear-gradient(
             to left,
             transparent,
@@ -525,9 +607,218 @@ body::after {
 }
 
 
-/* =========================================================
+/* =====================================================
+   SCRATCH CARD
+   ===================================================== */
+
+.scratch-section {
+
+    text-align: center;
+
+    margin:
+        10px auto 65px;
+}
+
+
+.scratch-heading {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    color: #e3cd91;
+
+    margin-bottom: 8px;
+}
+
+
+.scratch-subtitle {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #aaa58e;
+
+    margin-bottom: 25px;
+}
+
+
+.scratch-card {
+
+    width: 100%;
+
+    max-width: 440px;
+
+    height: 230px;
+
+    margin: auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(221,190,105,0.75);
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #174e3f,
+            #08291f 75%
+        );
+
+    box-shadow:
+
+        0 20px 50px
+        rgba(0,0,0,0.35),
+
+        inset 0 0 30px
+        rgba(219,185,92,0.08);
+}
+
+
+.scratch-content {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(212,180,92,0.08),
+            transparent 65%
+        );
+}
+
+
+.reveal-small {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #b8ad8b;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+
+.reveal-date {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 38px;
+
+    font-weight: 600;
+
+    color: #e7cf91;
+
+    letter-spacing: 2px;
+}
+
+
+.reveal-time {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 25px;
+
+    color: #d5bd7c;
+
+    margin-top: 4px;
+}
+
+
+.reveal-name {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #a9a38d;
+
+    margin-top: 12px;
+}
+
+
+#scratchCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    cursor: crosshair;
+
+    touch-action: none;
+}
+
+
+.scratch-hint {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 14px;
+
+    text-align: center;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    color: #57461f;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
    DETAILS
-   ========================================================= */
+   ===================================================== */
 
 .details {
 
@@ -551,9 +842,12 @@ body::after {
 
     text-align: center;
 
-    border: 1px solid rgba(215,181,92,0.28);
+    border:
+        1px solid
+        rgba(215,181,92,0.28);
 
     background:
+
         linear-gradient(
             145deg,
             rgba(255,255,255,0.018),
@@ -561,23 +855,22 @@ body::after {
         );
 
     transition:
-        transform 0.3s ease,
-        border-color 0.3s ease;
+        transform 0.3s ease;
 }
 
 
 .card:hover {
 
-    transform: translateY(-4px);
-
-    border-color:
-        rgba(215,181,92,0.65);
+    transform:
+        translateY(-4px);
 }
 
 
 .card-symbol {
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family:
+        'Cormorant Garamond',
+        serif;
 
     font-size: 25px;
 
@@ -589,7 +882,9 @@ body::after {
 
 .card h3 {
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family:
+        'Cormorant Garamond',
+        serif;
 
     font-size: 22px;
 
@@ -613,15 +908,17 @@ body::after {
 }
 
 
-/* =========================================================
+/* =====================================================
    COUNTDOWN
-   ========================================================= */
+   ===================================================== */
 
 .countdown-title {
 
     text-align: center;
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family:
+        'Cormorant Garamond',
+        serif;
 
     font-size: 28px;
 
@@ -656,7 +953,8 @@ body::after {
     text-align: center;
 
     border:
-        1px solid rgba(215,181,92,0.4);
+        1px solid
+        rgba(215,181,92,0.4);
 
     background:
         rgba(0,0,0,0.12);
@@ -667,7 +965,9 @@ body::after {
 
     display: block;
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family:
+        'Cormorant Garamond',
+        serif;
 
     font-size: 36px;
 
@@ -693,9 +993,9 @@ body::after {
 }
 
 
-/* =========================================================
-   LOCATION BUTTON
-   ========================================================= */
+/* =====================================================
+   LOCATION
+   ===================================================== */
 
 .buttons {
 
@@ -744,9 +1044,9 @@ body::after {
 }
 
 
-/* =========================================================
+/* =====================================================
    FOOTER
-   ========================================================= */
+   ===================================================== */
 
 .footer {
 
@@ -769,7 +1069,9 @@ body::after {
 
 .footer-signature {
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family:
+        'Cormorant Garamond',
+        serif;
 
     font-size: 25px;
 
@@ -779,9 +1081,9 @@ body::after {
 }
 
 
-/* =========================================================
+/* =====================================================
    MOBILE
-   ========================================================= */
+   ===================================================== */
 
 @media (max-width: 650px) {
 
@@ -791,10 +1093,12 @@ body::after {
             55px 20px;
     }
 
+
     .opening-box h1 {
 
         font-size: 40px;
     }
+
 
     .opening-box p {
 
@@ -803,10 +1107,12 @@ body::after {
         letter-spacing: 1.5px;
     }
 
+
     .invitation-frame {
 
         padding: 14px;
     }
+
 
     .hero {
 
@@ -814,15 +1120,18 @@ body::after {
             60px 10px 50px;
     }
 
+
     .bismillah {
 
         font-size: 24px;
     }
 
+
     .hero h1 {
 
         font-size: 48px;
     }
+
 
     .subtitle {
 
@@ -831,6 +1140,7 @@ body::after {
         letter-spacing: 3px;
     }
 
+
     .details {
 
         grid-template-columns: 1fr;
@@ -838,15 +1148,18 @@ body::after {
         gap: 12px;
     }
 
+
     .card {
 
         padding: 25px 15px;
     }
 
+
     .countdown {
 
         gap: 8px;
     }
+
 
     .time-box {
 
@@ -855,10 +1168,12 @@ body::after {
         padding: 14px 5px;
     }
 
+
     .time-box span {
 
         font-size: 29px;
     }
+
 
     .time-box small {
 
@@ -867,12 +1182,24 @@ body::after {
         letter-spacing: 1px;
     }
 
+
+    .scratch-card {
+
+        height: 215px;
+    }
+
+
+    .reveal-date {
+
+        font-size: 32px;
+    }
+
 }
 
 
-/* =========================================================
-   EXTRA SMALL PHONES
-   ========================================================= */
+/* =====================================================
+   VERY SMALL PHONES
+   ===================================================== */
 
 @media (max-width: 380px) {
 
@@ -881,37 +1208,57 @@ body::after {
         font-size: 42px;
     }
 
+
     .time-box {
 
         width: 70px;
     }
 
+
+    .scratch-card {
+
+        height: 205px;
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================================================
+<!-- =====================================================
      OPENING SCREEN
-     ========================================================= -->
+     ===================================================== -->
 
 <div id="opening">
 
     <div class="opening-box">
 
-        <div class="crescent">☾</div>
+        <div class="crescent">
+            ☾
+        </div>
+
 
         <h1>
+
             Rizwan Ansari
+
             <br>
-            <span style="font-size:0.65em;">&</span>
+
+            <span style="font-size:0.65em;">
+                &
+            </span>
+
             <br>
+
             Nabila Ansari
+
         </h1>
+
 
         <p>
 
@@ -919,10 +1266,12 @@ body::after {
 
             <br><br>
 
-            You are respectfully invited<br>
+            You are respectfully invited
+            <br>
             to our Walima Celebration
 
         </p>
+
 
         <button
             class="open-btn"
@@ -938,21 +1287,23 @@ body::after {
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      MAIN INVITATION
-     ========================================================= -->
+     ===================================================== -->
 
 <div id="invitation">
 
     <div class="invitation-frame">
 
 
-        <!-- Decorative corners -->
-
         <div class="corner tl"></div>
+
         <div class="corner tr"></div>
+
         <div class="corner bl"></div>
+
         <div class="corner br"></div>
+
 
 
         <!-- =================================================
@@ -1012,13 +1363,91 @@ body::after {
 
 
         <!-- =================================================
+             SCRATCH CARD
+             ================================================= -->
+
+        <section class="scratch-section">
+
+
+            <h2 class="scratch-heading">
+
+                A Little Surprise
+
+            </h2>
+
+
+            <p class="scratch-subtitle">
+
+                Scratch gently to reveal the date
+
+            </p>
+
+
+            <div class="scratch-card">
+
+
+                <!-- Hidden information underneath -->
+
+                <div class="scratch-content">
+
+
+                    <div class="reveal-small">
+
+                        Our Walima
+
+                    </div>
+
+
+                    <div class="reveal-date">
+
+                        15 MARCH 2027
+
+                    </div>
+
+
+                    <div class="reveal-time">
+
+                        7:00 PM
+
+                    </div>
+
+
+                    <div class="reveal-name">
+
+                        Rizwan Ansari & Nabila Ansari
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Scratch surface -->
+
+                <canvas
+                    id="scratchCanvas">
+                </canvas>
+
+
+                <div class="scratch-hint">
+
+                    Scratch Here ✦
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
              DETAILS
              ================================================= -->
 
         <div class="details">
 
-
-            <!-- DATE -->
 
             <div class="card">
 
@@ -1038,8 +1467,6 @@ body::after {
 
 
 
-            <!-- TIME -->
-
             <div class="card">
 
                 <div class="card-symbol">
@@ -1057,8 +1484,6 @@ body::after {
             </div>
 
 
-
-            <!-- VENUE -->
 
             <div class="card">
 
@@ -1172,7 +1597,9 @@ body::after {
                 href="https://www.google.com/maps/search/?api=1&query=Vintage+Place+Function+Hall+Ring+Road+Gulbarga+Karnataka+India"
                 target="_blank">
 
-                ❖ &nbsp; View Location &nbsp; ❖
+                ❖ &nbsp;
+                View Location
+                &nbsp; ❖
 
             </a>
 
@@ -1210,7 +1637,9 @@ body::after {
 
 
             <div style="margin-top:10px;">
+
                 ✦
+
             </div>
 
         </div>
@@ -1222,9 +1651,9 @@ body::after {
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      BACKGROUND MUSIC
-     ========================================================= -->
+     ===================================================== -->
 
 <audio
     id="weddingMusic"
@@ -1239,16 +1668,11 @@ body::after {
 
 
 
-<!-- =========================================================
-     JAVASCRIPT
-     ========================================================= -->
-
 <script>
 
-
-/* =========================================================
+/* =====================================================
    OPEN INVITATION
-   ========================================================= */
+   ===================================================== */
 
 function openInvitation() {
 
@@ -1256,10 +1680,7 @@ function openInvitation() {
         document.getElementById("opening");
 
 
-    /*
-       Start music after the visitor
-       taps the button.
-    */
+    /* Start music after user interaction */
 
     const music =
         document.getElementById("weddingMusic");
@@ -1278,19 +1699,14 @@ function openInvitation() {
     }
 
 
-    /*
-       Fade out opening screen.
-    */
+    /* Fade opening screen */
 
     opening.style.opacity = "0";
 
     opening.style.visibility = "hidden";
 
 
-    /*
-       Automatically scroll to the
-       main wedding invitation.
-    */
+    /* Automatically scroll to invitation */
 
     setTimeout(function() {
 
@@ -1310,9 +1726,9 @@ function openInvitation() {
 
 
 
-/* =========================================================
+/* =====================================================
    COUNTDOWN
-   ========================================================= */
+   ===================================================== */
 
 const weddingDate =
     new Date(
@@ -1407,6 +1823,375 @@ updateCountdown();
 setInterval(
     updateCountdown,
     1000
+);
+
+
+
+/* =====================================================
+   PREMIUM SCRATCH CARD
+   ===================================================== */
+
+const canvas =
+    document.getElementById("scratchCanvas");
+
+
+const scratchCard =
+    document.querySelector(".scratch-card");
+
+
+const ctx =
+    canvas.getContext("2d");
+
+
+let isScratching = false;
+
+let scratched = 0;
+
+
+/* Create scratch surface */
+
+function setupScratchCard() {
+
+    const rect =
+        scratchCard.getBoundingClientRect();
+
+
+    const dpr =
+        window.devicePixelRatio || 1;
+
+
+    canvas.width =
+        rect.width * dpr;
+
+
+    canvas.height =
+        rect.height * dpr;
+
+
+    canvas.style.width =
+        rect.width + "px";
+
+
+    canvas.style.height =
+        rect.height + "px";
+
+
+    ctx.scale(dpr, dpr);
+
+
+    /* Luxury gold scratch surface */
+
+    const gradient =
+        ctx.createLinearGradient(
+            0,
+            0,
+            rect.width,
+            rect.height
+        );
+
+
+    gradient.addColorStop(
+        0,
+        "#b28b3c"
+    );
+
+
+    gradient.addColorStop(
+        0.25,
+        "#e7cf8c"
+    );
+
+
+    gradient.addColorStop(
+        0.5,
+        "#c19c4d"
+    );
+
+
+    gradient.addColorStop(
+        0.75,
+        "#eed99a"
+    );
+
+
+    gradient.addColorStop(
+        1,
+        "#a98235"
+    );
+
+
+    ctx.fillStyle =
+        gradient;
+
+
+    ctx.fillRect(
+        0,
+        0,
+        rect.width,
+        rect.height
+    );
+
+
+    /* Gold pattern */
+
+    ctx.globalAlpha = 0.18;
+
+    for (
+        let x = -rect.height;
+        x < rect.width + rect.height;
+        x += 28
+    ) {
+
+        ctx.beginPath();
+
+        ctx.moveTo(
+            x,
+            0
+        );
+
+        ctx.lineTo(
+            x + rect.height,
+            rect.height
+        );
+
+        ctx.strokeStyle =
+            "#fff4c7";
+
+        ctx.lineWidth = 1;
+
+        ctx.stroke();
+    }
+
+
+    ctx.globalAlpha = 1;
+
+
+    /* Cover text */
+
+    ctx.fillStyle =
+        "#4f3d18";
+
+
+    ctx.font =
+        "600 13px Montserrat, sans-serif";
+
+
+    ctx.textAlign =
+        "center";
+
+
+    ctx.textBaseline =
+        "middle";
+
+
+    ctx.fillText(
+        "SCRATCH TO REVEAL",
+        rect.width / 2,
+        rect.height / 2 - 12
+    );
+
+
+    ctx.font =
+        "11px Montserrat, sans-serif";
+
+
+    ctx.fillText(
+        "✦ A special surprise awaits ✦",
+        rect.width / 2,
+        rect.height / 2 + 14
+    );
+
+}
+
+
+/* Scratch function */
+
+function scratch(e) {
+
+    if (!isScratching)
+        return;
+
+
+    const rect =
+        canvas.getBoundingClientRect();
+
+
+    let x;
+    let y;
+
+
+    if (
+        e.touches &&
+        e.touches.length
+    ) {
+
+        x =
+            e.touches[0].clientX
+            - rect.left;
+
+        y =
+            e.touches[0].clientY
+            - rect.top;
+
+    } else {
+
+        x =
+            e.clientX
+            - rect.left;
+
+        y =
+            e.clientY
+            - rect.top;
+
+    }
+
+
+    ctx.globalCompositeOperation =
+        "destination-out";
+
+
+    ctx.beginPath();
+
+
+    ctx.arc(
+        x,
+        y,
+        25,
+        0,
+        Math.PI * 2
+    );
+
+
+    ctx.fill();
+
+
+    scratched++;
+
+
+    /* Check how much is scratched */
+
+    if (
+        scratched > 120
+    ) {
+
+        revealScratchCard();
+
+    }
+
+}
+
+
+/* Start scratching */
+
+canvas.addEventListener(
+    "mousedown",
+    function() {
+
+        isScratching = true;
+
+    }
+);
+
+
+canvas.addEventListener(
+    "mouseup",
+    function() {
+
+        isScratching = false;
+
+    }
+);
+
+
+canvas.addEventListener(
+    "mouseleave",
+    function() {
+
+        isScratching = false;
+
+    }
+);
+
+
+canvas.addEventListener(
+    "mousemove",
+    scratch
+);
+
+
+/* Mobile touch */
+
+canvas.addEventListener(
+    "touchstart",
+    function(e) {
+
+        e.preventDefault();
+
+        isScratching = true;
+
+        scratch(e);
+
+    },
+    { passive: false }
+);
+
+
+canvas.addEventListener(
+    "touchmove",
+    function(e) {
+
+        e.preventDefault();
+
+        scratch(e);
+
+    },
+    { passive: false }
+);
+
+
+canvas.addEventListener(
+    "touchend",
+    function() {
+
+        isScratching = false;
+
+    }
+);
+
+
+/* Reveal entire card */
+
+function revealScratchCard() {
+
+    canvas.style.transition =
+        "opacity 0.8s ease";
+
+
+    canvas.style.opacity =
+        "0";
+
+
+    setTimeout(function() {
+
+        canvas.style.display =
+            "none";
+
+    }, 800);
+
+}
+
+
+/* Setup */
+
+window.addEventListener(
+    "load",
+    setupScratchCard
+);
+
+
+window.addEventListener(
+    "resize",
+    setupScratchCard
 );
 
 </script>
