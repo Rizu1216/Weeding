@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -35,7 +36,9 @@ body {
     overflow-x: hidden;
 }
 
-/* OPENING */
+/* =========================
+   OPENING SCREEN
+========================= */
 
 .opening {
     min-height: 100vh;
@@ -46,6 +49,7 @@ body {
     text-align: center;
     padding: 30px 20px;
     position: relative;
+
     background:
         radial-gradient(circle at center, rgba(183,148,68,0.12), transparent 45%),
         linear-gradient(135deg, #04110c, #0b241a, #04110c);
@@ -57,6 +61,7 @@ body {
     top: 30px;
     left: 0;
     right: 0;
+
     color: #c9aa62;
     font-size: 24px;
     letter-spacing: 12px;
@@ -118,22 +123,33 @@ body {
     border: 1px solid #c8a85c;
     background: linear-gradient(135deg, #9d7b31, #d5b96d);
     color: #07140f;
+
     padding: 15px 35px;
     border-radius: 40px;
+
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     letter-spacing: 2px;
+
     cursor: pointer;
+
     transition: 0.3s;
-    box-shadow: 0 8px 30px rgba(198,164,83,0.25);
+
+    box-shadow:
+        0 8px 30px rgba(198,164,83,0.25);
 }
 
 .open-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(198,164,83,0.4);
+
+    box-shadow:
+        0 12px 35px rgba(198,164,83,0.4);
 }
 
-/* MAIN */
+
+/* =========================
+   MAIN INVITATION
+========================= */
 
 #mainInvitation {
     display: none;
@@ -143,29 +159,42 @@ body {
 .invitation-frame {
     max-width: 850px;
     margin: auto;
+
     position: relative;
+
     border: 1px solid rgba(204,171,93,0.5);
+
     padding: 45px 22px;
+
     background:
-        linear-gradient(rgba(7,25,18,0.92), rgba(5,18,13,0.96)),
-        radial-gradient(circle, #18372a, #06130e);
+        linear-gradient(
+            rgba(7,25,18,0.92),
+            rgba(5,18,13,0.96)
+        );
+
     box-shadow:
         0 0 50px rgba(0,0,0,0.45),
         inset 0 0 50px rgba(196,161,79,0.04);
 }
 
-/* CORNERS */
+
+/* =========================
+   GOLD CORNERS
+========================= */
 
 .corner {
     position: absolute;
+
     width: 35px;
     height: 35px;
+
     border-color: #c6a55d;
 }
 
 .corner.tl {
     top: 10px;
     left: 10px;
+
     border-top: 2px solid;
     border-left: 2px solid;
 }
@@ -173,6 +202,7 @@ body {
 .corner.tr {
     top: 10px;
     right: 10px;
+
     border-top: 2px solid;
     border-right: 2px solid;
 }
@@ -180,6 +210,7 @@ body {
 .corner.bl {
     bottom: 10px;
     left: 10px;
+
     border-bottom: 2px solid;
     border-left: 2px solid;
 }
@@ -187,280 +218,488 @@ body {
 .corner.br {
     bottom: 10px;
     right: 10px;
+
     border-bottom: 2px solid;
     border-right: 2px solid;
 }
 
+
+/* =========================
+   MAIN TEXT
+========================= */
+
 .main-bismillah {
     text-align: center;
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 30px;
+
     color: #d7bc78;
+
     margin-bottom: 15px;
 }
 
 .main-title {
     text-align: center;
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: clamp(42px, 10vw, 65px);
+
     color: #ead49a;
 }
 
 .main-amp {
     text-align: center;
+
     color: #c9a85c;
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 30px;
+
     margin: 4px 0;
 }
 
 .celebration {
     text-align: center;
+
     margin-top: 15px;
+
     font-size: 12px;
+
     letter-spacing: 4px;
+
     color: #c8b78d;
+
     text-transform: uppercase;
 }
 
 .description {
     max-width: 650px;
+
     margin: 25px auto 40px;
+
     text-align: center;
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 20px;
+
     line-height: 1.7;
+
     color: #ddd4bd;
 }
 
-/* DIVIDER */
+
+/* =========================
+   DIVIDER
+========================= */
 
 .divider {
     display: flex;
+
     align-items: center;
+
     gap: 15px;
+
     margin: 35px 0;
+
     color: #c5a45a;
 }
 
 .divider::before,
 .divider::after {
     content: "";
+
     flex: 1;
+
     height: 1px;
-    background: linear-gradient(to right, transparent, #b9974d);
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #b9974d
+        );
 }
 
 .divider::after {
-    background: linear-gradient(to left, transparent, #b9974d);
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            #b9974d
+        );
 }
 
-/* SCRATCH CARD */
+
+/* =========================
+   SCRATCH CARD
+========================= */
 
 .scratch-title {
     text-align: center;
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 27px;
+
     color: #dfc783;
+
     margin-bottom: 8px;
 }
 
 .scratch-subtitle {
     text-align: center;
+
     font-size: 11px;
+
     letter-spacing: 2px;
+
     color: #9f967d;
+
     margin-bottom: 18px;
 }
 
 .scratch-wrapper {
+
     position: relative;
+
     width: min(100%, 430px);
+
     height: 210px;
+
     margin: auto;
+
     border: 1px solid #b89448;
+
     border-radius: 15px;
+
     overflow: hidden;
+
     background: #10291f;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.3);
 }
 
+
+/* CONTENT UNDER SCRATCH */
+
 .reveal-content {
+
     position: absolute;
+
     inset: 0;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     flex-direction: column;
+
     text-align: center;
+
     background:
-        radial-gradient(circle, rgba(201,166,91,0.12), transparent 60%),
+        radial-gradient(
+            circle,
+            rgba(201,166,91,0.12),
+            transparent 60%
+        ),
         #0b2018;
 }
 
 .reveal-date {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 34px;
+
     color: #e5ca82;
+
     font-weight: 600;
 }
 
 .reveal-time {
+
     font-size: 15px;
+
     letter-spacing: 2px;
+
     color: #ddd0ad;
+
     margin-top: 8px;
 }
 
 .reveal-names {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 21px;
+
     margin-top: 12px;
+
     color: #c9b77f;
 }
 
+
+/* IMPORTANT SCRATCH CANVAS */
+
 #scratchCanvas {
+
     position: absolute;
-    inset: 0;
+
+    left: 0;
+    top: 0;
+
     width: 100%;
     height: 100%;
+
+    display: block;
+
     cursor: crosshair;
+
     touch-action: none;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+
+    z-index: 10;
 }
 
-/* INFO CARDS */
+
+/* =========================
+   INFO CARDS
+========================= */
 
 .info-grid {
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 15px;
+
     margin-top: 30px;
 }
 
 .info-card {
-    border: 1px solid rgba(196,164,91,0.4);
+
+    border:
+        1px solid rgba(196,164,91,0.4);
+
     padding: 25px 15px;
+
     text-align: center;
-    background: rgba(255,255,255,0.025);
+
+    background:
+        rgba(255,255,255,0.025);
+
     border-radius: 10px;
 }
 
 .icon {
     font-size: 25px;
+
     margin-bottom: 12px;
 }
 
 .info-label {
+
     font-size: 10px;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
+
     color: #a79b7c;
+
     margin-bottom: 7px;
 }
 
 .info-value {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 20px;
+
     color: #e1cc91;
 }
 
-/* COUNTDOWN */
+
+/* =========================
+   COUNTDOWN
+========================= */
 
 .countdown-title {
+
     text-align: center;
+
     font-family: 'Cormorant Garamond', serif;
+
     color: #dfc783;
+
     font-size: 28px;
+
     margin-bottom: 20px;
 }
 
 .countdown {
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 10px;
+
     max-width: 650px;
+
     margin: auto;
 }
 
 .count-box {
+
     text-align: center;
+
     padding: 17px 8px;
-    border: 1px solid rgba(194,162,87,0.35);
+
+    border:
+        1px solid rgba(194,162,87,0.35);
+
     border-radius: 8px;
 }
 
 .count-number {
+
     display: block;
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 32px;
+
     color: #e1ca89;
 }
 
 .count-label {
+
     font-size: 8px;
+
     letter-spacing: 1px;
+
     color: #9e957e;
+
     text-transform: uppercase;
 }
 
-/* MAP */
+
+/* =========================
+   MAP
+========================= */
 
 .map-area {
+
     text-align: center;
+
     margin-top: 35px;
 }
 
 .map-btn {
+
     display: inline-block;
+
     text-decoration: none;
+
     background: transparent;
-    border: 1px solid #c3a157;
+
+    border:
+        1px solid #c3a157;
+
     color: #ddc783;
+
     padding: 13px 25px;
+
     border-radius: 30px;
+
     font-size: 12px;
+
     letter-spacing: 1px;
+
     transition: 0.3s;
 }
 
 .map-btn:hover {
+
     background: #c3a157;
+
     color: #08150f;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
+
     text-align: center;
+
     margin-top: 50px;
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 19px;
+
     color: #c7b888;
 }
 
 .footer-small {
+
     margin-top: 10px;
+
     font-family: 'Montserrat', sans-serif;
+
     font-size: 9px;
+
     letter-spacing: 2px;
+
     color: #77715f;
 }
 
-/* ANIMATION */
+
+/* =========================
+   ANIMATION
+========================= */
 
 @keyframes fadeIn {
+
     from {
+
         opacity: 0;
-        transform: translateY(20px);
+
+        transform:
+            translateY(20px);
     }
 
     to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 650px) {
 
@@ -489,7 +728,8 @@ body {
     }
 
     .countdown {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .scratch-wrapper {
@@ -502,11 +742,16 @@ body {
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- OPENING SCREEN -->
+
+<!-- =========================================
+     OPENING SCREEN
+========================================= -->
 
 <section class="opening" id="openingScreen">
 
@@ -533,21 +778,37 @@ body {
         </div>
 
         <div class="family-line">
+
             Son of Muqeem Ansari
+
             <br>
+
             &
+
             <br>
+
             Daughter of Khaja Ansari
+
         </div>
 
         <div class="open-text">
-            Together with our families,<br>
-            we warmly invite you to join us<br>
+
+            Together with our families,
+            <br>
+
+            we warmly invite you to join us
+            <br>
+
             on the joyous occasion of our Walima.
+
         </div>
 
-        <button class="open-btn" onclick="openInvitation()">
+        <button
+            class="open-btn"
+            id="openButton">
+
             OPEN INVITATION
+
         </button>
 
     </div>
@@ -555,41 +816,60 @@ body {
 </section>
 
 
-<!-- MAIN INVITATION -->
+
+<!-- =========================================
+     MAIN INVITATION
+========================================= -->
 
 <section id="mainInvitation">
 
     <div class="invitation-frame">
+
 
         <div class="corner tl"></div>
         <div class="corner tr"></div>
         <div class="corner bl"></div>
         <div class="corner br"></div>
 
+
         <div class="main-bismillah">
+
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+
         </div>
+
 
         <div class="main-title">
             Rizwan
         </div>
 
+
         <div class="main-amp">
             &
         </div>
+
 
         <div class="main-title">
             Nabila
         </div>
 
+
         <div class="celebration">
+
             Walima Celebration
+
         </div>
 
+
         <div class="description">
-            In the name of Allah, the Most Gracious, the Most Merciful.
-            With immense happiness and gratitude, we invite you to celebrate
-            this beautiful beginning of our journey together.
+
+            In the name of Allah, the Most Gracious,
+            the Most Merciful.
+
+            With immense happiness and gratitude,
+            we invite you to celebrate this beautiful
+            beginning of our journey together.
+
         </div>
 
 
@@ -601,32 +881,55 @@ body {
         <!-- SCRATCH CARD -->
 
         <div class="scratch-title">
+
             A Special Surprise
+
         </div>
+
 
         <div class="scratch-subtitle">
+
             SCRATCH TO REVEAL THE DATE
+
         </div>
 
+
         <div class="scratch-wrapper">
+
+
+            <!-- WHAT IS UNDER THE SCRATCH -->
 
             <div class="reveal-content">
 
                 <div class="reveal-date">
+
                     15 March 2027
+
                 </div>
+
 
                 <div class="reveal-time">
+
                     7:00 PM
+
                 </div>
 
+
                 <div class="reveal-names">
+
                     Rizwan & Nabila
+
                 </div>
 
             </div>
 
-            <canvas id="scratchCanvas"></canvas>
+
+            <!-- SCRATCH LAYER -->
+
+            <canvas
+                id="scratchCanvas">
+            </canvas>
+
 
         </div>
 
@@ -639,6 +942,7 @@ body {
         <!-- EVENT DETAILS -->
 
         <div class="info-grid">
+
 
             <div class="info-card">
 
@@ -685,10 +989,14 @@ body {
                 </div>
 
                 <div class="info-value">
-                    Vintage Place Function Hall
+
+                    Vintage Place
+                    Function Hall
+
                 </div>
 
             </div>
+
 
         </div>
 
@@ -699,31 +1007,84 @@ body {
             ✦
         </div>
 
+
         <div class="countdown-title">
+
             Counting Down To Our Special Day
+
         </div>
+
 
         <div class="countdown">
 
-            <div class="count-box">
-                <span class="count-number" id="days">0</span>
-                <span class="count-label">Days</span>
-            </div>
 
             <div class="count-box">
-                <span class="count-number" id="hours">0</span>
-                <span class="count-label">Hours</span>
+
+                <span
+                    class="count-number"
+                    id="days">
+
+                    0
+
+                </span>
+
+                <span class="count-label">
+                    Days
+                </span>
+
             </div>
 
-            <div class="count-box">
-                <span class="count-number" id="minutes">0</span>
-                <span class="count-label">Minutes</span>
-            </div>
 
             <div class="count-box">
-                <span class="count-number" id="seconds">0</span>
-                <span class="count-label">Seconds</span>
+
+                <span
+                    class="count-number"
+                    id="hours">
+
+                    0
+
+                </span>
+
+                <span class="count-label">
+                    Hours
+                </span>
+
             </div>
+
+
+            <div class="count-box">
+
+                <span
+                    class="count-number"
+                    id="minutes">
+
+                    0
+
+                </span>
+
+                <span class="count-label">
+                    Minutes
+                </span>
+
+            </div>
+
+
+            <div class="count-box">
+
+                <span
+                    class="count-number"
+                    id="seconds">
+
+                    0
+
+                </span>
+
+                <span class="count-label">
+                    Seconds
+                </span>
+
+            </div>
+
 
         </div>
 
@@ -734,10 +1095,13 @@ body {
 
             <a
                 class="map-btn"
+
                 href="https://www.google.com/maps/search/?api=1&query=Vintage+Place+Function+Hall+Ring+Road+Gulbarga+Karnataka+India"
-                target="_blank"
-            >
+
+                target="_blank">
+
                 📍 OPEN LOCATION IN GOOGLE MAPS
+
             </a>
 
         </div>
@@ -749,279 +1113,638 @@ body {
 
             May Allah bless our journey
             <br>
+
             with love, happiness and endless blessings. 🤍
 
+
             <div class="footer-small">
-                RIZWAN & NABILA • 15 MARCH 2027
+
+                RIZWAN & NABIL﻿A • 15 MARCH 2027
+
             </div>
 
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- BACKGROUND MUSIC -->
 
-<audio id="bgMusic" loop preload="auto">
-    <source src="new-music.mp3" type="audio/mpeg">
+<!-- =========================================
+     BACKGROUND MUSIC
+========================================= -->
+
+<audio
+    id="bgMusic"
+    loop
+    preload="auto">
+
+    <source
+        src="new-music.mp3"
+        type="audio/mpeg">
+
 </audio>
+
 
 
 <script>
 
-/* OPEN INVITATION */
 
-function openInvitation() {
+/* =========================================
+   OPEN INVITATION
+========================================= */
 
-    document.getElementById("openingScreen").style.display = "none";
+const openButton =
+    document.getElementById("openButton");
 
-    document.getElementById("mainInvitation").style.display = "block";
+const openingScreen =
+    document.getElementById("openingScreen");
 
-    window.scrollTo({
-        top: 0,
-        behavior: "instant"
-    });
+const mainInvitation =
+    document.getElementById("mainInvitation");
 
-
-    /* PLAY MUSIC */
-
-    const music = document.getElementById("bgMusic");
-
-    music.volume = 0.55;
-
-    music.play().catch(function(error) {
-        console.log("Music could not start:", error);
-    });
+const music =
+    document.getElementById("bgMusic");
 
 
-    /* AUTOMATIC SCROLL */
+openButton.addEventListener(
+    "click",
+    function() {
 
-    setTimeout(function() {
 
-        let scrollSpeed = 2.0;
+        /* HIDE OPENING */
 
-        function autoScroll() {
+        openingScreen.style.display =
+            "none";
 
-            window.scrollBy(0, scrollSpeed);
 
-            if (
-                window.innerHeight + window.scrollY <
-                document.documentElement.scrollHeight
-            ) {
+        /* SHOW INVITATION */
 
-                requestAnimationFrame(autoScroll);
+        mainInvitation.style.display =
+            "block";
+
+
+        /* GO TO TOP */
+
+        window.scrollTo(
+            0,
+            0
+        );
+
+
+        /* PLAY MUSIC */
+
+        music.volume = 0.55;
+
+        music.play().catch(
+            function(error) {
+
+                console.log(
+                    "Music error:",
+                    error
+                );
 
             }
+        );
+
+
+        /* AUTO SCROLL */
+
+        setTimeout(
+            startAutoScroll,
+            1000
+        );
+
+    }
+);
+
+
+/* =========================================
+   AUTO SCROLL
+========================================= */
+
+function startAutoScroll() {
+
+    let scrollSpeed = 2.0;
+
+    function scrollPage() {
+
+        window.scrollBy(
+            0,
+            scrollSpeed
+        );
+
+
+        if (
+            window.innerHeight +
+            window.scrollY
+            <
+            document.documentElement
+                .scrollHeight
+        ) {
+
+            requestAnimationFrame(
+                scrollPage
+            );
 
         }
 
-        autoScroll();
+    }
 
-    }, 1000);
-
+    scrollPage();
 }
 
 
-/* COUNTDOWN */
+/* =========================================
+   COUNTDOWN
+========================================= */
 
 const weddingDate =
-    new Date("March 15, 2027 19:00:00").getTime();
+    new Date(
+        "March 15, 2027 19:00:00"
+    ).getTime();
+
 
 function updateCountdown() {
 
-    const now = new Date().getTime();
 
-    const distance = weddingDate - now;
+    const now =
+        new Date().getTime();
+
+
+    const distance =
+        weddingDate - now;
+
 
     if (distance <= 0) {
 
-        document.getElementById("days").innerText = "0";
-        document.getElementById("hours").innerText = "0";
-        document.getElementById("minutes").innerText = "0";
-        document.getElementById("seconds").innerText = "0";
+        document.getElementById("days")
+            .innerText = "0";
+
+        document.getElementById("hours")
+            .innerText = "0";
+
+        document.getElementById("minutes")
+            .innerText = "0";
+
+        document.getElementById("seconds")
+            .innerText = "0";
 
         return;
     }
 
-    const days = Math.floor(
-        distance / (1000 * 60 * 60 * 24)
-    );
 
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) /
-        (1000 * 60 * 60)
-    );
+    const days =
+        Math.floor(
+            distance /
+            (1000 * 60 * 60 * 24)
+        );
 
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) /
-        (1000 * 60)
-    );
 
-    const seconds = Math.floor(
-        (distance % (1000 * 60)) /
-        1000
-    );
+    const hours =
+        Math.floor(
+            (
+                distance %
+                (1000 * 60 * 60 * 24)
+            ) /
+            (1000 * 60 * 60)
+        );
 
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds;
+
+    const minutes =
+        Math.floor(
+            (
+                distance %
+                (1000 * 60 * 60)
+            ) /
+            (1000 * 60)
+        );
+
+
+    const seconds =
+        Math.floor(
+            (
+                distance %
+                (1000 * 60)
+            ) /
+            1000
+        );
+
+
+    document.getElementById("days")
+        .innerText = days;
+
+    document.getElementById("hours")
+        .innerText = hours;
+
+    document.getElementById("minutes")
+        .innerText = minutes;
+
+    document.getElementById("seconds")
+        .innerText = seconds;
+
 }
 
-setInterval(updateCountdown, 1000);
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
 
 updateCountdown();
 
 
-/* SCRATCH CARD */
 
-const canvas = document.getElementById("scratchCanvas");
+/* =========================================
+   WORKING SCRATCH CARD
+========================================= */
 
-const ctx = canvas.getContext("2d");
+const canvas =
+    document.getElementById(
+        "scratchCanvas"
+    );
 
-let isDrawing = false;
+const ctx =
+    canvas.getContext(
+        "2d",
+        {
+            willReadFrequently: true
+        }
+    );
 
 
-/* CANVAS SIZE */
+let isScratching = false;
 
-function resizeCanvas() {
 
-    const rect = canvas.getBoundingClientRect();
+/* SCRATCH BRUSH SIZE */
 
-    const dpr = window.devicePixelRatio || 1;
+const brushSize = 28;
 
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
 
-    ctx.scale(dpr, dpr);
+/* =========================================
+   PREPARE CANVAS
+========================================= */
 
-    ctx.fillStyle = "#9b8c68";
+function setupScratchCard() {
+
+
+    const rect =
+        canvas.getBoundingClientRect();
+
+
+    /*
+       IMPORTANT:
+       Canvas internal size is exactly
+       the same as its visible CSS size.
+    */
+
+    canvas.width =
+        Math.floor(rect.width);
+
+    canvas.height =
+        Math.floor(rect.height);
+
+
+    /* RESET */
+
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    /* GOLD/SILVER SCRATCH SURFACE */
+
+    const gradient =
+        ctx.createLinearGradient(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+
+    gradient.addColorStop(
+        0,
+        "#a18f68"
+    );
+
+    gradient.addColorStop(
+        0.5,
+        "#c0ad7b"
+    );
+
+    gradient.addColorStop(
+        1,
+        "#8f7e59"
+    );
+
+
+    ctx.fillStyle =
+        gradient;
+
 
     ctx.fillRect(
         0,
         0,
-        rect.width,
-        rect.height
+        canvas.width,
+        canvas.height
     );
 
-    ctx.fillStyle = "#d6c58d";
 
-    ctx.font = "600 18px Montserrat";
+    /* SCRATCH CARD TEXT */
 
-    ctx.textAlign = "center";
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    ctx.fillStyle =
+        "#f1e3b7";
+
+
+    ctx.font =
+        "600 17px Montserrat";
+
+
+    ctx.textAlign =
+        "center";
+
+
+    ctx.textBaseline =
+        "middle";
+
 
     ctx.fillText(
         "SCRATCH HERE",
-        rect.width / 2,
-        rect.height / 2
+        canvas.width / 2,
+        canvas.height / 2
     );
+
+
+    /* SMALL DECORATION */
+
+    ctx.font =
+        "24px serif";
+
+
+    ctx.fillText(
+        "✦",
+        canvas.width / 2,
+        canvas.height / 2 - 35
+    );
+
 }
 
-resizeCanvas();
+
+setupScratchCard();
 
 
-/* SCRATCH FUNCTION */
 
-function scratch(e) {
+/* =========================================
+   GET TOUCH/MOUSE POSITION
+========================================= */
 
-    if (!isDrawing) return;
+function getPosition(event) {
 
-    const rect = canvas.getBoundingClientRect();
 
-    let x;
-    let y;
+    const rect =
+        canvas.getBoundingClientRect();
 
-    if (e.touches) {
 
-        x = e.touches[0].clientX - rect.left;
+    return {
 
-        y = e.touches[0].clientY - rect.top;
+        x:
+            event.clientX -
+            rect.left,
 
-    } else {
+        y:
+            event.clientY -
+            rect.top
 
-        x = e.clientX - rect.left;
+    };
 
-        y = e.clientY - rect.top;
+}
 
-    }
 
-    ctx.globalCompositeOperation = "destination-out";
+
+/* =========================================
+   SCRATCH AT POSITION
+========================================= */
+
+function scratchAt(
+    x,
+    y
+) {
+
+
+    ctx.globalCompositeOperation =
+        "destination-out";
+
 
     ctx.beginPath();
+
 
     ctx.arc(
         x,
         y,
-        22,
+        brushSize,
         0,
         Math.PI * 2
     );
 
+
     ctx.fill();
+
+
+    /*
+       Also make a small line/area
+       so fast finger movements
+       don't leave gaps.
+    */
+
+    ctx.lineWidth =
+        brushSize * 2;
+
+    ctx.lineCap =
+        "round";
+
+    ctx.lineJoin =
+        "round";
+
 }
 
 
-/* MOUSE EVENTS */
 
-canvas.addEventListener("mousedown", function() {
+/* =========================================
+   POINTER DOWN
+========================================= */
 
-    isDrawing = true;
-
-});
-
-canvas.addEventListener("mouseup", function() {
-
-    isDrawing = false;
-
-});
-
-canvas.addEventListener("mouseleave", function() {
-
-    isDrawing = false;
-
-});
-
-canvas.addEventListener("mousemove", scratch);
+canvas.addEventListener(
+    "pointerdown",
+    function(event) {
 
 
-/* TOUCH EVENTS */
-
-canvas.addEventListener("touchstart", function(e) {
-
-    e.preventDefault();
-
-    isDrawing = true;
-
-    scratch(e);
-
-}, { passive: false });
+        event.preventDefault();
 
 
-canvas.addEventListener("touchmove", function(e) {
-
-    e.preventDefault();
-
-    scratch(e);
-
-}, { passive: false });
+        isScratching =
+            true;
 
 
-canvas.addEventListener("touchend", function() {
+        /*
+           Capture the finger/mouse
+           so scratching continues
+           smoothly.
+        */
 
-    isDrawing = false;
+        try {
 
-});
+            canvas.setPointerCapture(
+                event.pointerId
+            );
+
+        } catch (error) {}
 
 
-/* PREVENT PAGE SCROLL DURING SCRATCH */
+        const position =
+            getPosition(event);
 
-canvas.addEventListener("touchmove", function(e) {
 
-    e.preventDefault();
+        scratchAt(
+            position.x,
+            position.y
+        );
 
-}, { passive: false });
+    },
+    {
+        passive: false
+    }
+);
+
+
+
+/* =========================================
+   POINTER MOVE
+========================================= */
+
+canvas.addEventListener(
+    "pointermove",
+    function(event) {
+
+
+        if (!isScratching) {
+            return;
+        }
+
+
+        event.preventDefault();
+
+
+        const position =
+            getPosition(event);
+
+
+        scratchAt(
+            position.x,
+            position.y
+        );
+
+    },
+    {
+        passive: false
+    }
+);
+
+
+
+/* =========================================
+   POINTER UP
+========================================= */
+
+canvas.addEventListener(
+    "pointerup",
+    function(event) {
+
+
+        isScratching =
+            false;
+
+
+        try {
+
+            canvas.releasePointerCapture(
+                event.pointerId
+            );
+
+        } catch (error) {}
+
+    }
+);
+
+
+
+/* =========================================
+   POINTER CANCEL
+========================================= */
+
+canvas.addEventListener(
+    "pointercancel",
+    function(event) {
+
+
+        isScratching =
+            false;
+
+
+        try {
+
+            canvas.releasePointerCapture(
+                event.pointerId
+            );
+
+        } catch (error) {}
+
+    }
+);
+
+
+
+/* =========================================
+   PREVENT CONTEXT MENU
+========================================= */
+
+canvas.addEventListener(
+    "contextmenu",
+    function(event) {
+
+        event.preventDefault();
+
+    }
+);
+
+
+
+/* =========================================
+   RESET SCRATCH CARD WHEN
+   SCREEN SIZE CHANGES
+========================================= */
+
+window.addEventListener(
+    "resize",
+    function() {
+
+        /*
+           Only reset if the invitation
+           has not been opened yet or
+           when the page layout changes.
+        */
+
+        setupScratchCard();
+
+    }
+);
+
 
 </script>
 
