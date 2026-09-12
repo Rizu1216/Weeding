@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rizwan Ansari & Nabila Ansari | Walima Invitation</title>
+<title>Rizwan Ansari & Nabila Ansari | Wedding Invitation</title>
 
 <meta name="description"
-content="Walima invitation of Rizwan Ansari and Nabila Ansari - 15 March 2027">
+content="Wedding invitation of Rizwan Ansari and Nabila Ansari - 15 March 2027">
 
 <style>
 
@@ -29,8 +29,6 @@ body{
     font-family:'Montserrat',sans-serif;
     overflow-x:hidden;
 }
-
-/* ================= BACKGROUND ================= */
 
 body::before{
     content:"";
@@ -56,22 +54,22 @@ body::after{
     position:fixed;
     inset:0;
     z-index:-1;
-    opacity:0.12;
+    opacity:.12;
     pointer-events:none;
 
     background-image:
     linear-gradient(
         45deg,
         transparent 48%,
-        rgba(224,196,118,0.4) 49%,
-        rgba(224,196,118,0.4) 51%,
+        rgba(224,196,118,.4) 49%,
+        rgba(224,196,118,.4) 51%,
         transparent 52%
     ),
     linear-gradient(
         -45deg,
         transparent 48%,
-        rgba(224,196,118,0.4) 49%,
-        rgba(224,196,118,0.4) 51%,
+        rgba(224,196,118,.4) 49%,
+        rgba(224,196,118,.4) 51%,
         transparent 52%
     );
 
@@ -80,7 +78,7 @@ body::after{
 
 
 /* ================================================= */
-/*                 ENVELOPE OPENING                  */
+/* OPENING SCREEN */
 /* ================================================= */
 
 #opening{
@@ -124,7 +122,6 @@ body::after{
     font-size:25px;
     color:#e8d39a;
     margin-bottom:18px;
-
     animation:fadeDown 1.5s ease;
 }
 
@@ -134,15 +131,13 @@ body::after{
     letter-spacing:4px;
     color:#d9c27d;
     margin-bottom:30px;
-
     text-transform:uppercase;
-
     animation:fadeDown 1.7s ease;
 }
 
 
 /* ================================================= */
-/*                    ENVELOPE                      */
+/* ENVELOPE */
 /* ================================================= */
 
 .envelope-area{
@@ -150,7 +145,6 @@ body::after{
     width:340px;
     height:250px;
     margin:0 auto 30px;
-
     perspective:1200px;
 
     animation:
@@ -162,12 +156,14 @@ body::after{
     inset:0;
 
     filter:
-    drop-shadow(0 30px 35px rgba(0,0,0,0.55));
+    drop-shadow(
+        0 30px 35px rgba(0,0,0,.55)
+    );
 }
 
 
 /* ================================================= */
-/*                    LETTER                        */
+/* LETTER */
 /* ================================================= */
 
 .letter{
@@ -189,7 +185,7 @@ body::after{
     border:1px solid #c5a85e;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.35);
+    0 10px 30px rgba(0,0,0,.35);
 
     z-index:2;
 
@@ -221,53 +217,33 @@ body::after{
     line-height:1;
 }
 
-
-/* ================================================= */
-/*             FAMILY DETAILS ON LETTER             */
-/* ================================================= */
-
 .letter-family{
     font-family:'Cormorant Garamond',serif;
-
     font-size:12px;
-
     line-height:1.25;
-
     letter-spacing:.3px;
-
     color:#6f5b2b;
-
     margin-top:8px;
-
     text-align:center;
 }
 
 .letter-family span{
     display:block;
-
     font-size:13px;
-
     color:#a27d35;
-
     margin:1px 0;
 }
 
-
-/* DATE */
-
 .letter-date{
     margin-top:8px;
-
     font-size:8px;
-
     letter-spacing:2px;
-
     color:#725b29;
 }
 
 
 /* ================================================= */
-/*                ENVELOPE BACK                     */
+/* ENVELOPE DESIGN */
 /* ================================================= */
 
 .envelope-back{
@@ -285,7 +261,8 @@ body::after{
 
     z-index:3;
 
-    clip-path:polygon(
+    clip-path:
+    polygon(
         0 0,
         100% 0,
         100% 100%,
@@ -293,13 +270,9 @@ body::after{
     );
 }
 
-
-/* LEFT FOLD */
-
 .envelope-left{
     position:absolute;
     inset:0;
-
     z-index:5;
 
     background:
@@ -309,22 +282,20 @@ body::after{
         #08291f
     );
 
-    clip-path:polygon(
+    clip-path:
+    polygon(
         0 0,
         50% 50%,
         0 100%
     );
 
-    border-left:1px solid rgba(219,184,96,.7);
+    border-left:
+    1px solid rgba(219,184,96,.7);
 }
-
-
-/* RIGHT FOLD */
 
 .envelope-right{
     position:absolute;
     inset:0;
-
     z-index:5;
 
     background:
@@ -334,22 +305,20 @@ body::after{
         #08291f
     );
 
-    clip-path:polygon(
+    clip-path:
+    polygon(
         100% 0,
         50% 50%,
         100% 100%
     );
 
-    border-right:1px solid rgba(219,184,96,.7);
+    border-right:
+    1px solid rgba(219,184,96,.7);
 }
-
-
-/* BOTTOM FLAP */
 
 .envelope-bottom{
     position:absolute;
     inset:0;
-
     z-index:6;
 
     background:
@@ -359,22 +328,20 @@ body::after{
         #06261e
     );
 
-    clip-path:polygon(
+    clip-path:
+    polygon(
         0 100%,
         50% 48%,
         100% 100%
     );
 
-    border-bottom:1px solid rgba(219,184,96,.75);
+    border-bottom:
+    1px solid rgba(219,184,96,.75);
 }
-
-
-/* TOP FLAP */
 
 .envelope-flap{
     position:absolute;
     inset:0;
-
     z-index:8;
 
     background:
@@ -384,7 +351,8 @@ body::after{
         #082b21
     );
 
-    clip-path:polygon(
+    clip-path:
+    polygon(
         0 0,
         100% 0,
         50% 53%
@@ -393,32 +361,30 @@ body::after{
     transform-origin:top center;
 
     transition:
-        transform 1.3s cubic-bezier(.22,.61,.36,1);
+    transform 1.3s cubic-bezier(.22,.61,.36,1);
 
-    border-top:1px solid rgba(219,184,96,.75);
+    border-top:
+    1px solid rgba(219,184,96,.75);
 }
 
 .envelope.open .envelope-flap{
     transform:rotateX(180deg);
 }
 
-
-/* GOLD BORDER */
-
 .envelope-gold-line{
     position:absolute;
     inset:7px;
-
     z-index:9;
 
-    border:1px solid rgba(223,190,103,.35);
+    border:
+    1px solid rgba(223,190,103,.35);
 
     pointer-events:none;
 }
 
 
 /* ================================================= */
-/*                    WAX SEAL                      */
+/* WAX SEAL */
 /* ================================================= */
 
 .wax-seal{
@@ -430,7 +396,8 @@ body::after{
     left:50%;
     top:51%;
 
-    transform:translate(-50%,-50%);
+    transform:
+    translate(-50%,-50%);
 
     z-index:20;
 
@@ -444,25 +411,25 @@ body::after{
         #76561e 100%
     );
 
-    border:3px solid #e1c477;
+    border:
+    3px solid #e1c477;
 
     box-shadow:
     0 5px 15px rgba(0,0,0,.5),
     inset 0 2px 4px rgba(255,255,255,.35);
 
     display:flex;
-
     justify-content:center;
     align-items:center;
 
     cursor:pointer;
 
     transition:
-        transform .8s ease,
-        opacity .6s ease;
+    transform .8s ease,
+    opacity .6s ease;
 
     animation:
-        sealPulse 2.2s ease-in-out infinite;
+    sealPulse 2.2s ease-in-out infinite;
 }
 
 .wax-seal::before{
@@ -471,12 +438,12 @@ body::after{
     font-family:'Cormorant Garamond',serif;
 
     font-size:17px;
-
     font-weight:700;
 
     color:#284331;
 
-    border:1px solid rgba(39,67,49,.65);
+    border:
+    1px solid rgba(39,67,49,.65);
 
     width:52px;
     height:52px;
@@ -484,17 +451,15 @@ body::after{
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 }
 
 .envelope.open .wax-seal{
     transform:
-        translate(-50%,-50%)
-        scale(0.2)
-        rotate(25deg);
+    translate(-50%,-50%)
+    scale(.2)
+    rotate(25deg);
 
     opacity:0;
 
@@ -503,7 +468,7 @@ body::after{
 
 
 /* ================================================= */
-/*                    OPEN TEXT                     */
+/* OPEN TEXT */
 /* ================================================= */
 
 .open-instruction{
@@ -516,7 +481,7 @@ body::after{
     margin-bottom:8px;
 
     animation:
-        pulseText 2s ease-in-out infinite;
+    pulseText 2s ease-in-out infinite;
 }
 
 .open-sub{
@@ -529,13 +494,11 @@ body::after{
     color:#aaa58e;
 }
 
-
-/* OPEN BUTTON */
-
 .open-btn{
     margin-top:25px;
 
-    border:1px solid #d9b867;
+    border:
+    1px solid #d9b867;
 
     background:
     linear-gradient(
@@ -565,10 +528,6 @@ body::after{
 
     box-shadow:
     0 12px 30px rgba(0,0,0,.35);
-
-    transition:
-    transform .3s ease,
-    box-shadow .3s ease;
 }
 
 .open-btn:hover{
@@ -593,7 +552,7 @@ body::after{
 
 
 /* ================================================= */
-/*              ENVELOPE OPEN EFFECT                */
+/* ENVELOPE OPEN */
 /* ================================================= */
 
 .envelope.open .letter{
@@ -610,7 +569,7 @@ body::after{
 
 
 /* ================================================= */
-/*                MAIN INVITATION                   */
+/* MAIN INVITATION */
 /* ================================================= */
 
 #invitation{
@@ -621,7 +580,7 @@ body::after{
     background:
     radial-gradient(
         circle at 50% 0%,
-        rgba(202,171,91,0.08),
+        rgba(202,171,91,.08),
         transparent 30%
     );
 }
@@ -635,17 +594,18 @@ body::after{
 
     padding:28px;
 
-    border:1px solid rgba(218,183,91,0.65);
+    border:
+    1px solid rgba(218,183,91,.65);
 
     background:
     linear-gradient(
         145deg,
-        rgba(255,255,255,0.018),
-        rgba(0,0,0,0.12)
+        rgba(255,255,255,.018),
+        rgba(0,0,0,.12)
     );
 
     box-shadow:
-    0 30px 90px rgba(0,0,0,0.35);
+    0 30px 90px rgba(0,0,0,.35);
 }
 
 .corner{
@@ -691,13 +651,14 @@ body::after{
 
 
 /* ================================================= */
-/*                     HERO                         */
+/* MAIN HERO */
 /* ================================================= */
 
 .hero{
     text-align:center;
 
-    padding:75px 15px 65px;
+    padding:
+    75px 15px 65px;
 }
 
 .bismillah{
@@ -713,7 +674,8 @@ body::after{
 .hero h1{
     font-family:'Cormorant Garamond',serif;
 
-    font-size:clamp(46px,10vw,82px);
+    font-size:
+    clamp(46px,10vw,82px);
 
     line-height:.95;
 
@@ -726,15 +688,63 @@ body::after{
     margin:10px 0;
 }
 
+
+/* ================================================= */
+/* FAMILY DETAILS ON MAIN PAGE */
+/* ================================================= */
+
+.main-family{
+
+    font-family:'Cormorant Garamond',serif;
+
+    text-align:center;
+
+    margin-top:15px;
+
+    margin-bottom:8px;
+
+    color:#cdb77b;
+
+}
+
+.family-line{
+
+    font-size:17px;
+
+    font-weight:500;
+
+    letter-spacing:.4px;
+
+    color:#d9c58e;
+
+    margin:4px 0;
+
+}
+
+.family-label{
+
+    font-size:13px;
+
+    color:#a99c79;
+
+    letter-spacing:.8px;
+
+    margin-top:2px;
+
+}
+
+
 .and{
     font-family:'Cormorant Garamond',serif;
 
-    font-size:28px;
+    font-size:30px;
 
     color:#c7a95c;
 
-    margin:18px 0;
+    margin:
+    25px 0 18px;
 }
+
 
 .subtitle{
     font-family:'Montserrat',sans-serif;
@@ -747,13 +757,15 @@ body::after{
 
     color:#d7cba5;
 
-    margin-top:32px;
+    margin-top:35px;
 }
 
 .hero-description{
+
     max-width:570px;
 
-    margin:28px auto 0;
+    margin:
+    28px auto 0;
 
     font-size:12px;
 
@@ -766,25 +778,26 @@ body::after{
 
 
 /* ================================================= */
-/*                    DIVIDER                       */
+/* DIVIDER */
 /* ================================================= */
 
 .divider{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     gap:15px;
 
-    margin:15px 0 40px;
+    margin:
+    15px 0 40px;
 
     color:#c8a95d;
 }
 
 .divider::before,
 .divider::after{
+
     content:"";
 
     height:1px;
@@ -800,6 +813,7 @@ body::after{
 }
 
 .divider::after{
+
     background:
     linear-gradient(
         to left,
@@ -810,16 +824,19 @@ body::after{
 
 
 /* ================================================= */
-/*                  SCRATCH CARD                    */
+/* SCRATCH CARD */
 /* ================================================= */
 
 .scratch-section{
+
     text-align:center;
 
-    margin:10px auto 65px;
+    margin:
+    10px auto 65px;
 }
 
 .scratch-heading{
+
     font-family:'Cormorant Garamond',serif;
 
     font-size:30px;
@@ -832,6 +849,7 @@ body::after{
 }
 
 .scratch-subtitle{
+
     font-size:10px;
 
     letter-spacing:2px;
@@ -844,6 +862,7 @@ body::after{
 }
 
 .scratch-card{
+
     width:100%;
 
     max-width:440px;
@@ -856,7 +875,8 @@ body::after{
 
     overflow:hidden;
 
-    border:1px solid rgba(221,190,105,.75);
+    border:
+    1px solid rgba(221,190,105,.75);
 
     background:
     radial-gradient(
@@ -871,6 +891,7 @@ body::after{
 }
 
 .scratch-content{
+
     position:absolute;
 
     inset:0;
@@ -880,22 +901,15 @@ body::after{
     flex-direction:column;
 
     justify-content:center;
-
     align-items:center;
 
     text-align:center;
 
     padding:20px;
-
-    background:
-    radial-gradient(
-        circle,
-        rgba(212,180,92,.08),
-        transparent 65%
-    );
 }
 
 .reveal-small{
+
     font-size:9px;
 
     letter-spacing:4px;
@@ -908,6 +922,7 @@ body::after{
 }
 
 .reveal-date{
+
     font-family:'Cormorant Garamond',serif;
 
     font-size:38px;
@@ -920,6 +935,7 @@ body::after{
 }
 
 .reveal-time{
+
     font-family:'Cormorant Garamond',serif;
 
     font-size:25px;
@@ -930,6 +946,7 @@ body::after{
 }
 
 .reveal-name{
+
     font-size:9px;
 
     letter-spacing:2px;
@@ -942,6 +959,7 @@ body::after{
 }
 
 #scratchCanvas{
+
     position:absolute;
 
     inset:0;
@@ -955,6 +973,7 @@ body::after{
 }
 
 .scratch-hint{
+
     position:absolute;
 
     left:0;
@@ -980,10 +999,11 @@ body::after{
 
 
 /* ================================================= */
-/*                    DETAILS                       */
+/* DETAILS */
 /* ================================================= */
 
 .details{
+
     display:grid;
 
     grid-template-columns:
@@ -993,15 +1013,19 @@ body::after{
 
     max-width:820px;
 
-    margin:0 auto 55px;
+    margin:
+    0 auto 55px;
 }
 
 .card{
-    padding:30px 18px;
+
+    padding:
+    30px 18px;
 
     text-align:center;
 
-    border:1px solid rgba(215,181,92,.28);
+    border:
+    1px solid rgba(215,181,92,.28);
 
     background:
     linear-gradient(
@@ -1009,16 +1033,10 @@ body::after{
         rgba(255,255,255,.018),
         rgba(0,0,0,.12)
     );
-
-    transition:
-    transform .3s ease;
-}
-
-.card:hover{
-    transform:translateY(-4px);
 }
 
 .card-symbol{
+
     font-family:'Cormorant Garamond',serif;
 
     font-size:25px;
@@ -1029,6 +1047,7 @@ body::after{
 }
 
 .card h3{
+
     font-family:'Cormorant Garamond',serif;
 
     font-size:22px;
@@ -1041,6 +1060,7 @@ body::after{
 }
 
 .card p{
+
     font-size:11px;
 
     line-height:1.9;
@@ -1052,10 +1072,11 @@ body::after{
 
 
 /* ================================================= */
-/*                  COUNTDOWN                       */
+/* COUNTDOWN */
 /* ================================================= */
 
 .countdown-title{
+
     text-align:center;
 
     font-family:'Cormorant Garamond',serif;
@@ -1070,6 +1091,7 @@ body::after{
 }
 
 .countdown{
+
     display:flex;
 
     justify-content:center;
@@ -1082,18 +1104,23 @@ body::after{
 }
 
 .time-box{
+
     width:105px;
 
-    padding:18px 8px;
+    padding:
+    18px 8px;
 
     text-align:center;
 
-    border:1px solid rgba(215,181,92,.4);
+    border:
+    1px solid rgba(215,181,92,.4);
 
-    background:rgba(0,0,0,.12);
+    background:
+    rgba(0,0,0,.12);
 }
 
 .time-box span{
+
     display:block;
 
     font-family:'Cormorant Garamond',serif;
@@ -1106,6 +1133,7 @@ body::after{
 }
 
 .time-box small{
+
     display:block;
 
     margin-top:5px;
@@ -1121,23 +1149,27 @@ body::after{
 
 
 /* ================================================= */
-/*                    BUTTON                        */
+/* MAP BUTTON */
 /* ================================================= */
 
 .buttons{
+
     text-align:center;
 
     margin-top:15px;
 }
 
 .action-btn{
+
     display:inline-block;
 
     text-decoration:none;
 
-    padding:15px 32px;
+    padding:
+    15px 32px;
 
-    border:1px solid #c9a75b;
+    border:
+    1px solid #c9a75b;
 
     background:transparent;
 
@@ -1150,13 +1182,10 @@ body::after{
     letter-spacing:2px;
 
     text-transform:uppercase;
-
-    transition:
-    background .3s ease,
-    color .3s ease;
 }
 
 .action-btn:hover{
+
     background:#d3b66c;
 
     color:#09251c;
@@ -1164,15 +1193,17 @@ body::after{
 
 
 /* ================================================= */
-/*                    FOOTER                        */
+/* FOOTER */
 /* ================================================= */
 
 .footer{
+
     text-align:center;
 
     margin-top:60px;
 
-    padding:0 15px 20px;
+    padding:
+    0 15px 20px;
 
     color:#aaa58e;
 
@@ -1184,6 +1215,7 @@ body::after{
 }
 
 .footer-signature{
+
     font-family:'Cormorant Garamond',serif;
 
     font-size:25px;
@@ -1195,7 +1227,7 @@ body::after{
 
 
 /* ================================================= */
-/*                    ANIMATIONS                    */
+/* ANIMATIONS */
 /* ================================================= */
 
 @keyframes envelopeFloat{
@@ -1212,12 +1244,14 @@ body::after{
 @keyframes sealPulse{
 
     0%,100%{
+
         box-shadow:
         0 5px 15px rgba(0,0,0,.5),
         0 0 0 0 rgba(225,196,119,.25);
     }
 
     50%{
+
         box-shadow:
         0 5px 20px rgba(0,0,0,.6),
         0 0 0 10px rgba(225,196,119,0);
@@ -1250,7 +1284,7 @@ body::after{
 
 
 /* ================================================= */
-/*                    MOBILE                        */
+/* MOBILE */
 /* ================================================= */
 
 @media(max-width:650px){
@@ -1265,9 +1299,7 @@ body::after{
 
     .opening-title{
         font-size:17px;
-
         letter-spacing:3px;
-
         margin-bottom:25px;
     }
 
@@ -1306,7 +1338,6 @@ body::after{
     .wax-seal::before{
         width:46px;
         height:46px;
-
         font-size:15px;
     }
 
@@ -1319,7 +1350,8 @@ body::after{
     }
 
     .hero{
-        padding:60px 10px 50px;
+        padding:
+        60px 10px 50px;
     }
 
     .bismillah{
@@ -1328,6 +1360,20 @@ body::after{
 
     .hero h1{
         font-size:48px;
+    }
+
+    .family-line{
+        font-size:16px;
+    }
+
+    .family-label{
+        font-size:12px;
+    }
+
+    .and{
+        font-size:28px;
+        margin:
+        20px 0 15px;
     }
 
     .subtitle{
@@ -1341,7 +1387,8 @@ body::after{
     }
 
     .card{
-        padding:25px 15px;
+        padding:
+        25px 15px;
     }
 
     .countdown{
@@ -1350,7 +1397,8 @@ body::after{
 
     .time-box{
         width:76px;
-        padding:14px 5px;
+        padding:
+        14px 5px;
     }
 
     .time-box span{
@@ -1383,6 +1431,10 @@ body::after{
         font-size:42px;
     }
 
+    .family-line{
+        font-size:15px;
+    }
+
     .time-box{
         width:70px;
     }
@@ -1400,139 +1452,141 @@ body::after{
 
 
 <!-- ================================================= -->
-<!--              PREMIUM ENVELOPE OPENING            -->
+<!-- OPENING ENVELOPE -->
 <!-- ================================================= -->
 
 <div id="opening">
 
-    <div class="opening-content">
-
-        <div class="opening-bismillah">
-            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-        </div>
-
-        <div class="opening-title">
-            A Special Invitation For You
-        </div>
+<div class="opening-content">
 
 
-        <div class="envelope-area">
+<div class="opening-bismillah">
 
-            <div class="envelope" id="envelope">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
 
-
-                <!-- LETTER INSIDE ENVELOPE -->
-
-                <div class="letter">
-
-                    <div class="letter-small">
-                        Walima Celebration
-                    </div>
+</div>
 
 
-                    <div class="letter-names">
-                        Rizwan & Nabila
-                    </div>
+<div class="opening-title">
+
+A Special Invitation For You
+
+</div>
 
 
-                    <!-- FAMILY DETAILS ADDED -->
+<div class="envelope-area">
 
-                    <div class="letter-family">
-
-                        Son of Muqeem Ansari
-
-                        <span>
-                            &
-                        </span>
-
-                        Daughter of Khaja Ansari
-
-                    </div>
+<div class="envelope" id="envelope">
 
 
-                    <div class="letter-date">
-                        15 MARCH 2027
-                    </div>
+<div class="letter">
 
-                </div>
+<div class="letter-small">
 
+Walima Celebration
 
-                <!-- ENVELOPE BACK -->
-
-                <div class="envelope-back"></div>
+</div>
 
 
-                <!-- SIDE FOLDS -->
+<div class="letter-names">
 
-                <div class="envelope-left"></div>
+Rizwan & Nabila
 
-                <div class="envelope-right"></div>
-
-
-                <!-- BOTTOM FLAP -->
-
-                <div class="envelope-bottom"></div>
+</div>
 
 
-                <!-- TOP FLAP -->
+<div class="letter-family">
 
-                <div class="envelope-flap"></div>
+Son of Muqeem Ansari
 
+<span>&</span>
 
-                <!-- GOLD BORDER -->
+Daughter of Khaja Ansari
 
-                <div class="envelope-gold-line"></div>
-
-
-                <!-- WAX SEAL -->
-
-                <div
-                    class="wax-seal"
-                    id="waxSeal"
-                    onclick="openInvitation()">
-                </div>
+</div>
 
 
-            </div>
+<div class="letter-date">
 
-        </div>
+15 MARCH 2027
 
-
-        <div class="open-instruction">
-            Tap the seal to open
-        </div>
-
-        <div class="open-sub">
-            You are respectfully invited
-        </div>
+</div>
 
 
-        <button
-            class="open-btn"
-            onclick="openInvitation()">
-
-            ✦ &nbsp; Open Invitation &nbsp; ✦
-
-        </button>
+</div>
 
 
-        <div class="opening-footer">
-            Rizwan Ansari &nbsp; • &nbsp; Nabila Ansari
-        </div>
+<div class="envelope-back"></div>
 
-    </div>
+<div class="envelope-left"></div>
+
+<div class="envelope-right"></div>
+
+<div class="envelope-bottom"></div>
+
+<div class="envelope-flap"></div>
+
+<div class="envelope-gold-line"></div>
+
+
+<div
+class="wax-seal"
+id="waxSeal"
+onclick="openInvitation()">
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="open-instruction">
+
+Tap the seal to open
+
+</div>
+
+
+<div class="open-sub">
+
+You are respectfully invited
+
+</div>
+
+
+<button
+class="open-btn"
+onclick="openInvitation()">
+
+✦ &nbsp; Open Invitation &nbsp; ✦
+
+</button>
+
+
+<div class="opening-footer">
+
+Rizwan Ansari
+&nbsp; • &nbsp;
+Nabila Ansari
+
+</div>
+
+
+</div>
 
 </div>
 
 
 
 <!-- ================================================= -->
-<!--                  MAIN INVITATION                 -->
+<!-- MAIN INVITATION -->
 <!-- ================================================= -->
 
 <div id="invitation">
 
 <div class="invitation-frame">
+
 
 <div class="corner tl"></div>
 <div class="corner tr"></div>
@@ -1540,32 +1594,68 @@ body::after{
 <div class="corner br"></div>
 
 
-<!-- HERO -->
+
+<!-- ================================================= -->
+<!-- MAIN NAMES -->
+<!-- ================================================= -->
 
 <section class="hero">
 
+
 <div class="bismillah">
+
 بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+
 </div>
 
 
 <h1>
+
 Rizwan Ansari
+
 </h1>
+
+
+<div class="main-family">
+
+<div class="family-line">
+
+Son of Muqeem Ansari
+
+</div>
+
+</div>
 
 
 <div class="and">
+
 &
+
 </div>
 
 
 <h1>
+
 Nabila Ansari
+
 </h1>
 
 
+<div class="main-family">
+
+<div class="family-line">
+
+Daughter of Khaja Ansari
+
+</div>
+
+</div>
+
+
 <div class="subtitle">
+
 WALIMA CELEBRATION
+
 </div>
 
 
@@ -1577,53 +1667,73 @@ beginning together with our family and loved ones.
 
 </p>
 
+
 </section>
 
 
+
 <div class="divider">
+
 ✦
+
 </div>
 
 
 
 <!-- ================================================= -->
-<!--                  SCRATCH CARD                    -->
+<!-- SCRATCH CARD -->
 <!-- ================================================= -->
 
 <section class="scratch-section">
 
+
 <h2 class="scratch-heading">
+
 A Little Surprise
+
 </h2>
 
 
 <p class="scratch-subtitle">
+
 Scratch gently to reveal the date
+
 </p>
 
 
 <div class="scratch-card">
 
+
 <div class="scratch-content">
 
+
 <div class="reveal-small">
+
 Our Walima
+
 </div>
 
 
 <div class="reveal-date">
+
 15 MARCH 2027
+
 </div>
 
 
 <div class="reveal-time">
+
 7:00 PM
+
 </div>
 
 
 <div class="reveal-name">
+
 Rizwan Ansari & Nabila Ansari
+
 </div>
+
 
 </div>
 
@@ -1632,18 +1742,21 @@ Rizwan Ansari & Nabila Ansari
 
 
 <div class="scratch-hint">
+
 Scratch Here ✦
+
 </div>
 
 
 </div>
+
 
 </section>
 
 
 
 <!-- ================================================= -->
-<!--                     DETAILS                     -->
+<!-- DETAILS -->
 <!-- ================================================= -->
 
 <div class="details">
@@ -1652,51 +1765,73 @@ Scratch Here ✦
 <div class="card">
 
 <div class="card-symbol">
+
 ◇
+
 </div>
 
 <h3>
+
 Date
+
 </h3>
 
 <p>
+
 15 March 2027
+
 </p>
 
 </div>
 
 
+
 <div class="card">
 
 <div class="card-symbol">
+
 ◈
+
 </div>
 
 <h3>
+
 Time
+
 </h3>
 
 <p>
+
 7:00 PM
+
 </p>
 
 </div>
 
 
+
 <div class="card">
 
 <div class="card-symbol">
+
 ❖
+
 </div>
 
 <h3>
+
 Venue
+
 </h3>
 
 <p>
-Vintage Place Function Hall<br>
-Ring Road, Gulbarga<br>
+
+Vintage Place Function Hall
+<br>
+Ring Road, Gulbarga
+<br>
 Karnataka, India
+
 </p>
 
 </div>
@@ -1707,11 +1842,13 @@ Karnataka, India
 
 
 <!-- ================================================= -->
-<!--                  COUNTDOWN                       -->
+<!-- COUNTDOWN -->
 <!-- ================================================= -->
 
 <h2 class="countdown-title">
+
 The Celebration Begins In
+
 </h2>
 
 
@@ -1721,11 +1858,15 @@ The Celebration Begins In
 <div class="time-box">
 
 <span id="days">
+
 0
+
 </span>
 
 <small>
+
 Days
+
 </small>
 
 </div>
@@ -1734,11 +1875,15 @@ Days
 <div class="time-box">
 
 <span id="hours">
+
 0
+
 </span>
 
 <small>
+
 Hours
+
 </small>
 
 </div>
@@ -1747,11 +1892,15 @@ Hours
 <div class="time-box">
 
 <span id="minutes">
+
 0
+
 </span>
 
 <small>
+
 Minutes
+
 </small>
 
 </div>
@@ -1760,11 +1909,15 @@ Minutes
 <div class="time-box">
 
 <span id="seconds">
+
 0
+
 </span>
 
 <small>
+
 Seconds
+
 </small>
 
 </div>
@@ -1775,60 +1928,78 @@ Seconds
 
 
 <!-- ================================================= -->
-<!--                  GOOGLE MAPS                     -->
+<!-- MAP -->
 <!-- ================================================= -->
 
 <div class="buttons">
 
+
 <a
 class="action-btn"
+
 href="https://www.google.com/maps/search/?api=1&query=Vintage+Place+Function+Hall+Ring+Road+Gulbarga+Karnataka+India"
+
 target="_blank">
 
-❖ &nbsp; View Location &nbsp; ❖
+❖ &nbsp;
+View Location
+&nbsp; ❖
 
 </a>
+
 
 </div>
 
 
 
 <!-- ================================================= -->
-<!--                     FOOTER                      -->
+<!-- FOOTER -->
 <!-- ================================================= -->
 
 <div class="footer">
 
+
 <p>
-Your presence will make our celebration even more meaningful.
+
+Your presence will make our celebration
+even more meaningful.
+
 </p>
 
 
 <p>
+
 May Allah bless this new beginning with love,
 happiness and barakah.
+
 </p>
 
 
 <div class="footer-signature">
+
 Rizwan & Nabila
+
 </div>
 
 
 <div style="margin-top:10px;">
+
 ✦
-</div>
 
 </div>
 
 
 </div>
+
+
+</div>
+
 </div>
 
 
 
 <!-- ================================================= -->
-<!--                    MUSIC                         -->
+<!-- MUSIC -->
 <!-- ================================================= -->
 
 <audio
@@ -1848,7 +2019,7 @@ type="audio/mpeg">
 
 
 /* ================================================= */
-/*              OPEN ENVELOPE                       */
+/* OPEN INVITATION */
 /* ================================================= */
 
 let invitationOpened = false;
@@ -1856,175 +2027,192 @@ let invitationOpened = false;
 
 function openInvitation(){
 
-    if(invitationOpened){
-        return;
-    }
 
-    invitationOpened = true;
+if(invitationOpened){
 
+return;
 
-    const opening =
-        document.getElementById("opening");
+}
 
 
-    const envelope =
-        document.getElementById("envelope");
+invitationOpened = true;
 
 
-    const music =
-        document.getElementById("weddingMusic");
+const opening =
+document.getElementById("opening");
 
 
-    /* PLAY MUSIC */
-
-    if(music){
-
-        music.volume = 0.75;
-
-        music.play().catch(function(){
-
-            console.log(
-                "Music could not start automatically."
-            );
-
-        });
-
-    }
+const envelope =
+document.getElementById("envelope");
 
 
-    /* OPEN ENVELOPE */
-
-    envelope.classList.add("open");
-
-
-    /* WAIT FOR ENVELOPE ANIMATION */
-
-    setTimeout(function(){
-
-        opening.classList.add("hide");
-
-    },1800);
+const music =
+document.getElementById("weddingMusic");
 
 
-    /* START AUTO SCROLL */
+/* MUSIC */
 
-    setTimeout(function(){
+if(music){
 
-        let scrollSpeed = 2.0;
+music.volume = 0.75;
 
+music.play().catch(function(){
 
-        function slowAutoScroll(){
+console.log(
+"Music could not start automatically."
+);
 
-            window.scrollBy(
-                0,
-                scrollSpeed
-            );
+});
 
-
-            if(
-                window.innerHeight +
-                window.scrollY <
-                document.documentElement.scrollHeight
-            ){
-
-                requestAnimationFrame(
-                    slowAutoScroll
-                );
-
-            }
-
-        }
+}
 
 
-        slowAutoScroll();
+/* OPEN ENVELOPE */
 
-    },3200);
+envelope.classList.add("open");
+
+
+/* HIDE OPENING */
+
+setTimeout(function(){
+
+opening.classList.add("hide");
+
+},1800);
+
+
+/* ================================================= */
+/* AUTO SCROLL SPEED = 3.0 */
+/* ================================================= */
+
+setTimeout(function(){
+
+
+let scrollSpeed = 3.0;
+
+
+function autoScroll(){
+
+
+window.scrollBy(
+0,
+scrollSpeed
+);
+
+
+if(
+window.innerHeight +
+window.scrollY <
+document.documentElement.scrollHeight
+){
+
+requestAnimationFrame(
+autoScroll
+);
+
+}
+
+}
+
+
+autoScroll();
+
+
+},3200);
 
 }
 
 
 
 /* ================================================= */
-/*                  COUNTDOWN                        */
+/* COUNTDOWN */
 /* ================================================= */
 
 const weddingDate =
-    new Date(
-        "March 15, 2027 19:00:00"
-    ).getTime();
+
+new Date(
+"March 15, 2027 19:00:00"
+).getTime();
 
 
 function updateCountdown(){
 
-    const now =
-        new Date().getTime();
+
+const now =
+new Date().getTime();
 
 
-    const distance =
-        weddingDate - now;
+const distance =
+weddingDate - now;
 
 
-    if(distance <= 0){
+if(distance <= 0){
 
-        document.getElementById("days")
-            .innerText = "0";
+document.getElementById("days")
+.innerText="0";
 
-        document.getElementById("hours")
-            .innerText = "0";
+document.getElementById("hours")
+.innerText="0";
 
-        document.getElementById("minutes")
-            .innerText = "0";
+document.getElementById("minutes")
+.innerText="0";
 
-        document.getElementById("seconds")
-            .innerText = "0";
+document.getElementById("seconds")
+.innerText="0";
 
-        return;
+return;
 
-    }
-
-
-    const days =
-        Math.floor(
-            distance /
-            (1000 * 60 * 60 * 24)
-        );
+}
 
 
-    const hours =
-        Math.floor(
-            (distance %
-            (1000 * 60 * 60 * 24)) /
-            (1000 * 60 * 60)
-        );
+const days =
+Math.floor(
+distance /
+(1000*60*60*24)
+);
 
 
-    const minutes =
-        Math.floor(
-            (distance %
-            (1000 * 60 * 60)) /
-            (1000 * 60)
-        );
+const hours =
+Math.floor(
+(distance %
+(1000*60*60*24))
+/
+(1000*60*60)
+);
 
 
-    const seconds =
-        Math.floor(
-            (distance %
-            (1000 * 60)) /
-            1000
-        );
+const minutes =
+Math.floor(
+(distance %
+(1000*60*60))
+/
+(1000*60)
+);
 
 
-    document.getElementById("days")
-        .innerText = days;
+const seconds =
+Math.floor(
+(distance %
+(1000*60))
+/
+1000
+);
 
-    document.getElementById("hours")
-        .innerText = hours;
 
-    document.getElementById("minutes")
-        .innerText = minutes;
+document.getElementById("days")
+.innerText=days;
 
-    document.getElementById("seconds")
-        .innerText = seconds;
+
+document.getElementById("hours")
+.innerText=hours;
+
+
+document.getElementById("minutes")
+.innerText=minutes;
+
+
+document.getElementById("seconds")
+.innerText=seconds;
 
 }
 
@@ -2033,426 +2221,420 @@ updateCountdown();
 
 
 setInterval(
-    updateCountdown,
-    1000
+updateCountdown,
+1000
 );
 
 
 
 /* ================================================= */
-/*                 SCRATCH CARD                      */
+/* SCRATCH CARD */
 /* ================================================= */
 
 const canvas =
-    document.getElementById(
-        "scratchCanvas"
-    );
+document.getElementById(
+"scratchCanvas"
+);
 
 
 const scratchCard =
-    document.querySelector(
-        ".scratch-card"
-    );
+document.querySelector(
+".scratch-card"
+);
 
 
 const ctx =
-    canvas.getContext("2d");
+canvas.getContext("2d");
 
 
-let isScratching = false;
+let isScratching=false;
 
-let scratched = 0;
+let scratched=0;
 
 
+/* ================================================= */
 /* SETUP SCRATCH CARD */
+/* ================================================= */
 
 function setupScratchCard(){
 
-    const rect =
-        scratchCard.getBoundingClientRect();
 
+const rect =
+scratchCard.getBoundingClientRect();
 
-    const dpr =
-        window.devicePixelRatio || 1;
 
+const dpr =
+window.devicePixelRatio || 1;
 
-    canvas.width =
-        rect.width * dpr;
 
+canvas.width =
+rect.width*dpr;
 
-    canvas.height =
-        rect.height * dpr;
 
+canvas.height =
+rect.height*dpr;
 
-    canvas.style.width =
-        rect.width + "px";
 
+canvas.style.width =
+rect.width+"px";
 
-    canvas.style.height =
-        rect.height + "px";
 
+canvas.style.height =
+rect.height+"px";
 
-    ctx.setTransform(
-        dpr,
-        0,
-        0,
-        dpr,
-        0,
-        0
-    );
 
+ctx.setTransform(
+dpr,
+0,
+0,
+dpr,
+0,
+0
+);
 
-    ctx.globalCompositeOperation =
-        "source-over";
 
+ctx.globalCompositeOperation =
+"source-over";
 
-    ctx.globalAlpha = 1;
 
+ctx.globalAlpha=1;
 
-    /* GOLD SCRATCH SURFACE */
 
-    const gradient =
-        ctx.createLinearGradient(
-            0,
-            0,
-            rect.width,
-            rect.height
-        );
+/* GOLD SURFACE */
 
+const gradient =
+ctx.createLinearGradient(
+0,
+0,
+rect.width,
+rect.height
+);
 
-    gradient.addColorStop(
-        0,
-        "#b28b3c"
-    );
 
+gradient.addColorStop(
+0,
+"#b28b3c"
+);
 
-    gradient.addColorStop(
-        0.25,
-        "#e7cf8c"
-    );
 
+gradient.addColorStop(
+.25,
+"#e7cf8c"
+);
 
-    gradient.addColorStop(
-        0.5,
-        "#c19c4d"
-    );
 
+gradient.addColorStop(
+.5,
+"#c19c4d"
+);
 
-    gradient.addColorStop(
-        0.75,
-        "#eed99a"
-    );
 
+gradient.addColorStop(
+.75,
+"#eed99a"
+);
 
-    gradient.addColorStop(
-        1,
-        "#a98235"
-    );
 
+gradient.addColorStop(
+1,
+"#a98235"
+);
 
-    ctx.fillStyle =
-        gradient;
 
+ctx.fillStyle=gradient;
 
-    ctx.fillRect(
-        0,
-        0,
-        rect.width,
-        rect.height
-    );
 
+ctx.fillRect(
+0,
+0,
+rect.width,
+rect.height
+);
 
-    /* DIAGONAL LINES */
 
-    ctx.globalAlpha = 0.18;
+/* DIAGONAL PATTERN */
 
+ctx.globalAlpha=.18;
 
-    for(
-        let x = -rect.height;
-        x < rect.width + rect.height;
-        x += 28
-    ){
 
-        ctx.beginPath();
+for(
+let x=-rect.height;
+x<rect.width+rect.height;
+x+=28
+){
 
+ctx.beginPath();
 
-        ctx.moveTo(
-            x,
-            0
-        );
+ctx.moveTo(
+x,
+0
+);
 
+ctx.lineTo(
+x+rect.height,
+rect.height
+);
 
-        ctx.lineTo(
-            x + rect.height,
-            rect.height
-        );
+ctx.strokeStyle=
+"#fff4c7";
 
+ctx.lineWidth=1;
 
-        ctx.strokeStyle =
-            "#fff4c7";
+ctx.stroke();
 
+}
 
-        ctx.lineWidth = 1;
 
+ctx.globalAlpha=1;
 
-        ctx.stroke();
 
-    }
+/* TEXT */
 
+ctx.fillStyle="#4f3d18";
 
-    ctx.globalAlpha = 1;
 
+ctx.font=
+"600 13px Montserrat, sans-serif";
 
-    /* SCRATCH TEXT */
 
-    ctx.fillStyle =
-        "#4f3d18";
+ctx.textAlign="center";
 
+ctx.textBaseline="middle";
 
-    ctx.font =
-        "600 13px Montserrat, sans-serif";
 
+ctx.fillText(
+"SCRATCH TO REVEAL",
+rect.width/2,
+rect.height/2-12
+);
 
-    ctx.textAlign =
-        "center";
 
+ctx.font=
+"11px Montserrat, sans-serif";
 
-    ctx.textBaseline =
-        "middle";
 
-
-    ctx.fillText(
-        "SCRATCH TO REVEAL",
-        rect.width / 2,
-        rect.height / 2 - 12
-    );
-
-
-    ctx.font =
-        "11px Montserrat, sans-serif";
-
-
-    ctx.fillText(
-        "✦ A special surprise awaits ✦",
-        rect.width / 2,
-        rect.height / 2 + 14
-    );
+ctx.fillText(
+"✦ A special surprise awaits ✦",
+rect.width/2,
+rect.height/2+14
+);
 
 }
 
 
 
 /* ================================================= */
-/*                SCRATCH FUNCTION                   */
+/* SCRATCH FUNCTION */
 /* ================================================= */
 
 function scratch(e){
 
-    if(!isScratching){
-        return;
-    }
+
+if(!isScratching){
+
+return;
+
+}
 
 
-    const rect =
-        canvas.getBoundingClientRect();
+const rect =
+canvas.getBoundingClientRect();
 
 
-    let x;
-    let y;
+let x;
+
+let y;
 
 
-    if(
-        e.touches &&
-        e.touches.length
-    ){
+if(
+e.touches &&
+e.touches.length
+){
 
-        x =
-            e.touches[0].clientX -
-            rect.left;
+x=
+e.touches[0].clientX-
+rect.left;
 
+y=
+e.touches[0].clientY-
+rect.top;
 
-        y =
-            e.touches[0].clientY -
-            rect.top;
+}
 
-    }
-    else{
+else{
 
-        x =
-            e.clientX -
-            rect.left;
+x=
+e.clientX-
+rect.left;
 
+y=
+e.clientY-
+rect.top;
 
-        y =
-            e.clientY -
-            rect.top;
-
-    }
-
-
-    ctx.globalCompositeOperation =
-        "destination-out";
+}
 
 
-    ctx.beginPath();
+ctx.globalCompositeOperation=
+"destination-out";
 
 
-    ctx.arc(
-        x,
-        y,
-        25,
-        0,
-        Math.PI * 2
-    );
+ctx.beginPath();
 
 
-    ctx.fill();
+ctx.arc(
+x,
+y,
+25,
+0,
+Math.PI*2
+);
 
 
-    scratched++;
+ctx.fill();
 
 
-    if(scratched > 120){
+scratched++;
 
-        revealScratchCard();
 
-    }
+if(scratched>120){
+
+revealScratchCard();
+
+}
 
 }
 
 
 
 /* ================================================= */
-/*                    MOUSE                         */
+/* MOUSE */
 /* ================================================= */
 
 canvas.addEventListener(
-    "mousedown",
-    function(){
+"mousedown",
+function(){
 
-        isScratching = true;
+isScratching=true;
 
-    }
+}
 );
 
 
 canvas.addEventListener(
-    "mouseup",
-    function(){
+"mouseup",
+function(){
 
-        isScratching = false;
+isScratching=false;
 
-    }
+}
 );
 
 
 canvas.addEventListener(
-    "mouseleave",
-    function(){
+"mouseleave",
+function(){
 
-        isScratching = false;
+isScratching=false;
 
-    }
+}
 );
 
 
 canvas.addEventListener(
-    "mousemove",
-    scratch
-);
-
-
-
-/* ================================================= */
-/*                     TOUCH                        */
-/* ================================================= */
-
-canvas.addEventListener(
-    "touchstart",
-    function(e){
-
-        e.preventDefault();
-
-        isScratching = true;
-
-        scratch(e);
-
-    },
-    {
-        passive:false
-    }
-);
-
-
-canvas.addEventListener(
-    "touchmove",
-    function(e){
-
-        e.preventDefault();
-
-        scratch(e);
-
-    },
-    {
-        passive:false
-    }
-);
-
-
-canvas.addEventListener(
-    "touchend",
-    function(){
-
-        isScratching = false;
-
-    }
+"mousemove",
+scratch
 );
 
 
 
 /* ================================================= */
-/*               REVEAL SCRATCH CARD                 */
+/* TOUCH */
+/* ================================================= */
+
+canvas.addEventListener(
+"touchstart",
+function(e){
+
+e.preventDefault();
+
+isScratching=true;
+
+scratch(e);
+
+},
+{
+passive:false
+}
+);
+
+
+canvas.addEventListener(
+"touchmove",
+function(e){
+
+e.preventDefault();
+
+scratch(e);
+
+},
+{
+passive:false
+}
+);
+
+
+canvas.addEventListener(
+"touchend",
+function(){
+
+isScratching=false;
+
+}
+);
+
+
+
+/* ================================================= */
+/* REVEAL */
 /* ================================================= */
 
 function revealScratchCard(){
 
-    canvas.style.transition =
-        "opacity 0.8s ease";
+
+canvas.style.transition=
+"opacity .8s ease";
 
 
-    canvas.style.opacity =
-        "0";
+canvas.style.opacity="0";
 
 
-    setTimeout(function(){
+setTimeout(function(){
 
-        canvas.style.display =
-            "none";
+canvas.style.display="none";
 
-    },800);
+},800);
 
 }
 
 
 
 /* ================================================= */
-/*                     LOAD                         */
+/* LOAD */
 /* ================================================= */
 
 window.addEventListener(
-    "load",
-    setupScratchCard
+"load",
+setupScratchCard
 );
 
 
-
 /* ================================================= */
-/*                    RESIZE                        */
+/* RESIZE */
 /* ================================================= */
 
 window.addEventListener(
-    "resize",
-    setupScratchCard
+"resize",
+setupScratchCard
 );
 
 
