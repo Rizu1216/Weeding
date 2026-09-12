@@ -1,1003 +1,864 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rizwan & Nibla | Wedding Invitation</title>
+  <title>Rizwan & Nibla | Walima Invitation</title>
 
-<meta name="description"
-content="Wedding invitation of Rizwan Ansari and Nibla Ansari - 15 March 2027">
+  <meta name="description"
+        content="You are cordially invited to the Walima celebration of Rizwan Ansari & Nibla Ansari on 15 March 2027.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-}
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
-html {
-    scroll-behavior: smooth;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: #fbf7f0;
-    color: #352923;
-    line-height: 1.7;
-}
-<!-- WEDDING MUSIC -->
-<audio id="weddingMusic" loop>
-    <source src="music/wedding-music.mp3" type="audio/mpeg">
-</audio>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f7f1e5;
+      color: #3b2a1f;
+      overflow-x: hidden;
+    }
 
-<button id="musicButton" aria-label="Play music">
-    🎵
-</button>
-/* =========================
-   HERO
-========================= */
+    /* =========================
+       OPENING SCREEN
+    ========================== */
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    padding: 30px 20px;
+    #opening {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background:
+        radial-gradient(circle at center, #fff8e9 0%, #ead9b6 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 25px;
+      transition: opacity 1s ease, visibility 1s ease;
+    }
 
-    background:
-        radial-gradient(circle at 20% 20%, rgba(184,145,76,.18), transparent 25%),
-        radial-gradient(circle at 80% 80%, rgba(184,145,76,.15), transparent 25%),
-        linear-gradient(135deg,#fffaf3,#eee0d2);
-}
+    #opening.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border: 1px solid rgba(174,132,63,.35);
-    border-radius: 50%;
-    top: -250px;
-    left: -200px;
-}
+    .opening-content {
+      max-width: 500px;
+      animation: fadeUp 1.5s ease;
+    }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    border: 1px solid rgba(174,132,63,.35);
-    border-radius: 50%;
-    bottom: -230px;
-    right: -180px;
-}
+    .moon {
+      font-size: 55px;
+      margin-bottom: 15px;
+      animation: floatMoon 3s ease-in-out infinite;
+    }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 850px;
-}
+    .opening-content h1 {
+      font-size: clamp(35px, 9vw, 65px);
+      color: #8a641d;
+      margin-bottom: 10px;
+    }
 
-.top-text {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 13px;
-    color: #a67c3d;
-    margin-bottom: 30px;
-}
+    .opening-content p {
+      font-size: 18px;
+      letter-spacing: 2px;
+      color: #705331;
+      margin-bottom: 30px;
+    }
 
-.names {
-    font-size: clamp(52px, 11vw, 105px);
-    font-weight: normal;
-    line-height: 1;
-    color: #342621;
-}
+    .open-btn {
+      border: none;
+      background: #8a641d;
+      color: white;
+      padding: 15px 35px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(75, 52, 20, 0.25);
+      transition: 0.3s;
+    }
 
-.names .and {
-    color: #b18a4a;
-    font-style: italic;
-    font-size: .55em;
-    margin: 0 10px;
-}
+    .open-btn:hover {
+      transform: translateY(-3px);
+      background: #6f5018;
+    }
 
-.hero-line {
-    width: 100px;
-    height: 1px;
-    background: #b18a4a;
-    margin: 35px auto;
-}
+    /* =========================
+       MAIN CONTAINER
+    ========================== */
 
-.wedding-date {
-    font-size: 25px;
-    letter-spacing: 4px;
-}
+    .page {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)),
+        #f7f1e5;
+    }
 
-.wedding-location {
-    color: #79665b;
-    margin-top: 8px;
-}
+    /* =========================
+       HERO
+    ========================== */
 
-.hero-button {
-    display: inline-block;
-    margin-top: 35px;
-    padding: 14px 34px;
-    border: 1px solid #b18a4a;
-    border-radius: 50px;
-    color: #352923;
-    text-decoration: none;
-    transition: .3s;
-}
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top, #fffaf0, #ead9b6 75%);
+    }
 
-.hero-button:hover {
-    background: #b18a4a;
-    color: white;
-}
+    .hero::before,
+    .hero::after {
+      content: "☾";
+      position: absolute;
+      color: rgba(138, 100, 29, 0.12);
+      font-size: 170px;
+    }
 
-/* =========================
-   SECTIONS
-========================= */
+    .hero::before {
+      top: 20px;
+      left: -20px;
+    }
 
-section {
-    max-width: 1050px;
-    margin: auto;
-    padding: 90px 20px;
-}
+    .hero::after {
+      bottom: 0;
+      right: -20px;
+      transform: rotate(180deg);
+    }
 
-.section-title {
-    text-align: center;
-    font-size: 40px;
-    font-weight: normal;
-    margin-bottom: 10px;
-}
+    .hero-content {
+      max-width: 850px;
+      position: relative;
+      z-index: 2;
+      animation: fadeUp 1.5s ease;
+    }
 
-.section-subtitle {
-    text-align: center;
-    color: #806d62;
-    margin-bottom: 45px;
-}
+    .bismillah {
+      font-size: clamp(28px, 6vw, 45px);
+      color: #8a641d;
+      margin-bottom: 25px;
+    }
 
-/* =========================
-   INTRO
-========================= */
+    .invitation {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+      color: #80623b;
+      margin-bottom: 20px;
+    }
 
-.intro {
-    text-align: center;
-    max-width: 720px;
-    margin: auto;
-}
+    .hero h1 {
+      font-size: clamp(42px, 11vw, 90px);
+      font-weight: normal;
+      color: #6c4b19;
+      line-height: 1.05;
+    }
 
-.intro-symbol {
-    color: #b18a4a;
-    font-size: 38px;
-    margin-bottom: 20px;
-}
+    .ampersand {
+      font-size: 35px;
+      color: #9c7a3c;
+      margin: 8px 0;
+    }
 
-/* =========================
-   COUNTDOWN
-========================= */
+    .walima {
+      margin-top: 25px;
+      font-size: 24px;
+      letter-spacing: 5px;
+      color: #8a641d;
+      text-transform: uppercase;
+    }
 
-.countdown {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 15px;
-    max-width: 700px;
-    margin: 40px auto 0;
-}
+    .hero-date {
+      margin-top: 20px;
+      font-size: 19px;
+      color: #654c2d;
+    }
 
-.count-box {
-    background: white;
-    border: 1px solid #e4d5c7;
-    padding: 22px 10px;
-    box-shadow: 0 8px 25px rgba(70,45,30,.05);
-}
-
-.count-number {
-    display: block;
-    font-size: 38px;
-    color: #a67c3d;
-}
-
-.count-label {
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #806d62;
-}
-
-/* =========================
-   DETAILS
-========================= */
-
-.details {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 25px;
-}
-
-.detail-card {
-    background: white;
-    border: 1px solid #e5d8ce;
-    padding: 35px 25px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(50,35,25,.05);
-}
-
-.detail-icon {
-    font-size: 34px;
-    margin-bottom: 12px;
-}
-
-.detail-card h3 {
-    color: #a67c3d;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-/* =========================
-   TIMELINE
-========================= */
-
-.timeline {
-    max-width: 750px;
-    margin: auto;
-}
-
-.timeline-item {
-    display: flex;
-    gap: 30px;
-    padding: 25px 0;
-    border-bottom: 1px solid #ded0c5;
-}
-
-.timeline-time {
-    width: 120px;
-    color: #a67c3d;
-    font-weight: bold;
-}
-
-.timeline-text strong {
-    display: block;
-    font-size: 19px;
-}
-
-/* =========================
-   MAP
-========================= */
-
-.map-section {
-    text-align: center;
-}
-
-.map-box {
-    background: #eee2d8;
-    padding: 45px 25px;
-    border: 1px solid #dccabd;
-    max-width: 750px;
-    margin: auto;
-}
-
-.map-address {
-    margin: 15px auto 25px;
-    max-width: 600px;
-    color: #66564e;
-}
-
-.map-button {
-    display: inline-block;
-    background: #a67c3d;
-    color: white;
-    text-decoration: none;
-    padding: 13px 28px;
-    border-radius: 30px;
-}
-
-/* =========================
-   RSVP
-========================= */
-
-.rsvp-section {
-    max-width: none;
-    background:
-        radial-gradient(circle at 10% 20%, rgba(177,138,74,.13), transparent 25%),
-        #eee1d7;
-}
-
-.rsvp-container {
-    max-width: 700px;
-    margin: auto;
-}
-
-.rsvp-form {
-    display: grid;
-    gap: 16px;
-}
-
-.rsvp-form input,
-.rsvp-form select,
-.rsvp-form textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #d7c5b8;
-    background: white;
-    font-family: inherit;
-    font-size: 15px;
-    border-radius: 4px;
-}
-
-.rsvp-form textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.rsvp-button {
-    border: none;
-    background: #a67c3d;
-    color: white;
-    padding: 16px;
-    border-radius: 40px;
-    font-family: inherit;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.success-message {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-    color: #755b32;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    text-align: center;
-    background: #302621;
-    color: #eee1d7;
-    padding: 55px 20px;
-}
-
-.footer-names {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.footer-small {
-    font-size: 13px;
-    opacity: .7;
-}
-
-/* =========================
-   DECORATION
-========================= */
-
-.ornament {
-    text-align: center;
-    color: #b18a4a;
-    font-size: 28px;
-    margin: 10px 0 35px;
-}
-
-.floral {
-    font-size: 28px;
-    letter-spacing: 8px;
-    margin-bottom: 20px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:650px) {
+    /* =========================
+       SECTION
+    ========================== */
 
     section {
-        padding: 65px 18px;
+      padding: 75px 20px;
+      text-align: center;
     }
 
-    .names {
-        font-size: 55px;
+    .section-title {
+      font-size: 34px;
+      color: #75531c;
+      margin-bottom: 15px;
     }
 
-    .wedding-date {
-        font-size: 20px;
+    .section-line {
+      width: 70px;
+      height: 2px;
+      background: #a68140;
+      margin: 0 auto 30px;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+      color: #594733;
+    }
+
+    /* =========================
+       COUNTDOWN
+    ========================== */
+
+    .countdown-section {
+      background: #efe3ca;
     }
 
     .countdown {
-        grid-template-columns: repeat(2,1fr);
+      max-width: 800px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
     }
+
+    .count-box {
+      background: rgba(255,255,255,0.65);
+      padding: 22px 8px;
+      border: 1px solid rgba(138,100,29,0.2);
+      border-radius: 12px;
+    }
+
+    .count-box span {
+      display: block;
+      font-size: clamp(28px, 7vw, 48px);
+      color: #76551f;
+      font-weight: bold;
+    }
+
+    .count-box small {
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #735c3a;
+    }
+
+    /* =========================
+       DETAILS
+    ========================== */
 
     .details {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .detail-card {
+      background: #fffaf0;
+      border: 1px solid #e1ceb0;
+      border-radius: 18px;
+      padding: 30px 20px;
+      box-shadow: 0 8px 25px rgba(72, 51, 20, 0.08);
+    }
+
+    .detail-icon {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .detail-card h3 {
+      color: #76551f;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .detail-card p {
+      line-height: 1.7;
+      color: #594733;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 25px;
+      border-radius: 30px;
+      font-size: 15px;
+      transition: 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-gold {
+      background: #8a641d;
+      color: white;
+    }
+
+    .btn-light {
+      background: #fffaf0;
+      color: #76551f;
+      border: 1px solid #c9aa72;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(70, 48, 15, 0.15);
+    }
+
+    /* =========================
+       RSVP
+    ========================== */
+
+    .rsvp-section {
+      background: #e9dcc1;
+    }
+
+    .rsvp-box {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .rsvp-box p {
+      line-height: 1.8;
+      color: #594733;
+    }
+
+    /* =========================
+       MUSIC BUTTON
+    ========================== */
+
+    #musicButton {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1000;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: none;
+      background: #8a641d;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 45px 20px;
+      text-align: center;
+      background: #5a421f;
+      color: #f8edda;
+    }
+
+    footer h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      opacity: 0.85;
+      font-size: 14px;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================== */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatMoon {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 650px) {
+
+      .details {
         grid-template-columns: 1fr;
-    }
+      }
 
-    .timeline-item {
-        gap: 15px;
-    }
+      .countdown {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 400px;
+      }
 
-    .timeline-time {
-        width: 90px;
-        font-size: 14px;
+      section {
+        padding: 60px 18px;
+      }
+
+      .hero {
+        min-height: 92vh;
+      }
+
+      .walima {
+        font-size: 19px;
+        letter-spacing: 3px;
+      }
     }
-}
-</style>
+  </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HERO
-========================= -->
+  <!-- =========================
+       OPENING SCREEN
+  ========================== -->
 
-<header class="hero">
+  <div id="opening">
+    <div class="opening-content">
+      <div class="moon">☾</div>
 
-<div class="hero-content">
+      <h1>Rizwan & Nibla</h1>
 
-<div class="floral">✦ ❀ ✦</div>
+      <p>WALIMA INVITATION</p>
 
-<div class="top-text">
-Together with our families
-</div>
+      <button class="open-btn" onclick="openInvitation()">
+        Open Invitation ✨
+      </button>
+    </div>
+  </div>
 
-<div class="names">
-Rizwan
-<span class="and">&amp;</span>
-Nibla
-</div>
 
-<div class="hero-line"></div>
+  <!-- =========================
+       BACKGROUND MUSIC
+       IMPORTANT:
+       Replace wedding-music.mp3 with your
+       uploaded music file name.
+  ========================== -->
 
-<div class="wedding-date">
-15 MARCH 2027
-</div>
+  <audio id="weddingMusic" loop>
+    <source src="wedding-music.mp3" type="audio/mpeg">
+  </audio>
 
-<div class="wedding-location">
-Kalaburagi, Karnataka, India
-</div>
+  <button id="musicButton" onclick="toggleMusic()" title="Play / Pause Music">
+    🎵
+  </button>
 
-<a href="#rsvp" class="hero-button">
-Kindly RSVP
-</a>
 
-</div>
+  <!-- =========================
+       MAIN PAGE
+  ========================== -->
 
-</header>
+  <div class="page">
 
+    <!-- HERO -->
 
-<!-- =========================
-     INTRO
-========================= -->
+    <header class="hero">
 
-<section>
+      <div class="hero-content">
 
-<div class="intro">
+        <div class="bismillah">
+          بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+        </div>
 
-<div class="intro-symbol">❦</div>
+        <div class="invitation">
+          In the name of Allah, the Most Gracious, the Most Merciful
+        </div>
 
-<h2 class="section-title">
-With Joy in Our Hearts
-</h2>
+        <div class="invitation">
+          You are cordially invited to celebrate
+        </div>
 
-<div class="ornament">──────── ✦ ────────</div>
+        <h1>Rizwan</h1>
 
-<p>
-We are delighted to invite you to celebrate
-the beginning of our beautiful journey together.
-Your presence and blessings would make our
-special day even more memorable.
-</p>
+        <div class="ampersand">&amp;</div>
 
-</div>
+        <h1>Nibla</h1>
 
-</section>
+        <div class="walima">
+          Walima Celebration
+        </div>
 
+        <div class="hero-date">
+          15 March 2027 • 7:00 PM
+        </div>
 
-<!-- =========================
-     COUNTDOWN
-========================= -->
+      </div>
 
-<section>
+    </header>
 
-<h2 class="section-title">
-Save the Date
-</h2>
 
-<p class="section-subtitle">
-The countdown has begun
-</p>
+    <!-- WELCOME -->
 
-<div class="countdown">
+    <section>
 
-<div class="count-box">
-<span class="count-number" id="days">--</span>
-<span class="count-label">Days</span>
-</div>
+      <h2 class="section-title">
+        With the Blessings of Allah
+      </h2>
 
-<div class="count-box">
-<span class="count-number" id="hours">--</span>
-<span class="count-label">Hours</span>
-</div>
+      <div class="section-line"></div>
 
-<div class="count-box">
-<span class="count-number" id="minutes">--</span>
-<span class="count-label">Minutes</span>
-</div>
+      <p class="intro">
+        With hearts full of gratitude and happiness,
+        we invite you to join us as we celebrate the
+        beautiful beginning of our new journey together.
+        Your presence and blessings will make our
+        Walima celebration even more special.
+      </p>
 
-<div class="count-box">
-<span class="count-number" id="seconds">--</span>
-<span class="count-label">Seconds</span>
-</div>
+    </section>
 
-</div>
 
-</section>
+    <!-- COUNTDOWN -->
 
+    <section class="countdown-section">
 
-<!-- =========================
-     DETAILS
-========================= -->
+      <h2 class="section-title">
+        Counting the Moments ❤️
+      </h2>
 
-<section>
+      <div class="section-line"></div>
 
-<h2 class="section-title">
-Wedding Details
-</h2>
+      <div class="countdown">
 
-<p class="section-subtitle">
-Everything you need to know
-</p>
+        <div class="count-box">
+          <span id="days">00</span>
+          <small>Days</small>
+        </div>
 
-<div class="details">
+        <div class="count-box">
+          <span id="hours">00</span>
+          <small>Hours</small>
+        </div>
 
-<div class="detail-card">
+        <div class="count-box">
+          <span id="minutes">00</span>
+          <small>Minutes</small>
+        </div>
 
-<div class="detail-icon">❀</div>
+        <div class="count-box">
+          <span id="seconds">00</span>
+          <small>Seconds</small>
+        </div>
 
-<h3>Date</h3>
+      </div>
 
-<p>
-Monday<br>
-<strong>15 March 2027</strong>
-</p>
+    </section>
 
-</div>
 
+    <!-- EVENT DETAILS -->
 
-<div class="detail-card">
+    <section>
 
-<div class="detail-icon">♢</div>
+      <h2 class="section-title">
+        Walima Details
+      </h2>
 
-<h3>Time</h3>
+      <div class="section-line"></div>
 
-<p>
-<strong>7:00 PM</strong><br>
-Wedding Ceremony
-</p>
+      <div class="details">
 
-</div>
+        <div class="detail-card">
 
+          <div class="detail-icon">📅</div>
 
-<div class="detail-card">
+          <h3>Date</h3>
 
-<div class="detail-icon">⌂</div>
+          <p>
+            Monday<br>
+            15 March 2027
+          </p>
 
-<h3>Venue</h3>
+        </div>
 
-<p>
-<strong>Vintage Place Function Hall</strong><br>
-Ring Road<br>
-Gulbarga, Karnataka
-</p>
 
-</div>
+        <div class="detail-card">
 
+          <div class="detail-icon">🕖</div>
 
-<div class="detail-card">
+          <h3>Time</h3>
 
-<div class="detail-icon">♡</div>
+          <p>
+            7:00 PM
+          </p>
 
-<h3>Dress Code</h3>
+        </div>
 
-<p>
-Elegant Indian / Traditional<br>
-Wear your festive best
-</p>
 
-</div>
+        <div class="detail-card">
 
-</div>
+          <div class="detail-icon">🏛️</div>
 
-</section>
+          <h3>Venue</h3>
 
+          <p>
+            Vintage Place Function Hall
+          </p>
 
-<!-- =========================
-     PROGRAM
-========================= -->
+        </div>
 
-<section>
 
-<h2 class="section-title">
-Celebration
-</h2>
+        <div class="detail-card">
 
-<p class="section-subtitle">
-Our special evening
-</p>
+          <div class="detail-icon">📍</div>
 
-<div class="timeline">
+          <h3>Address</h3>
 
-<div class="timeline-item">
+          <p>
+            Ring Road,<br>
+            Gulbarga, Karnataka,<br>
+            India
+          </p>
 
-<div class="timeline-time">
-6:30 PM
-</div>
+        </div>
 
-<div class="timeline-text">
-<strong>Guest Arrival</strong>
-Welcome and gathering
-</div>
+      </div>
 
-</div>
 
+      <div class="buttons">
 
-<div class="timeline-item">
+        <!-- Google Maps -->
+        <a
+          class="btn btn-gold"
+          href="https://www.google.com/maps/search/?api=1&query=Vintage+Place+Function+Hall+Ring+Road+Gulbarga+Karnataka+India"
+          target="_blank"
+          rel="noopener">
+          📍 Open Google Maps
+        </a>
 
-<div class="timeline-time">
-7:00 PM
-</div>
+      </div>
 
-<div class="timeline-text">
-<strong>Wedding Ceremony</strong>
-The beginning of our forever
-</div>
+    </section>
 
-</div>
 
+    <!-- RSVP -->
 
-<div class="timeline-item">
+    <section class="rsvp-section">
 
-<div class="timeline-time">
-8:00 PM
-</div>
+      <div class="rsvp-box">
 
-<div class="timeline-text">
-<strong>Celebration & Dinner</strong>
-Food, family and beautiful memories
-</div>
+        <h2 class="section-title">
+          RSVP 💌
+        </h2>
 
-</div>
+        <div class="section-line"></div>
 
+        <p>
+          Your presence would mean the world to us.
+          Kindly confirm your attendance by clicking
+          the button below.
+        </p>
 
-<div class="timeline-item">
+        <div class="buttons">
 
-<div class="timeline-time">
-9:00 PM
-</div>
+          <!--
+            CHANGE THIS LINK to your WhatsApp RSVP link.
+            
+            Example:
+            https://wa.me/919XXXXXXXXX?text=Assalamu%20Alaikum%20...
+          -->
 
-<div class="timeline-text">
-<strong>Photography & Blessings</strong>
-Let's capture the memories together
-</div>
+          <a
+            class="btn btn-gold"
+            href="https://wa.me/YOURNUMBER?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20the%20Walima%20of%20Rizwan%20%26%20Nibla%20on%2015%20March%202027."
+            target="_blank"
+            rel="noopener">
+            💌 RSVP on WhatsApp
+          </a>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</section>
+    </section>
 
 
-<!-- =========================
-     LOCATION
-========================= -->
+    <!-- FINAL MESSAGE -->
 
-<section class="map-section">
+    <section>
 
-<h2 class="section-title">
-Find Us
-</h2>
+      <h2 class="section-title">
+        We Can't Wait to Celebrate With You ❤️
+      </h2>
 
-<p class="section-subtitle">
-We can't wait to see you
-</p>
+      <div class="section-line"></div>
 
-<div class="map-box">
+      <p class="intro">
+        May Allah bless this beautiful journey with
+        love, happiness, peace and endless blessings.
+      </p>
 
-<div class="detail-icon">📍</div>
+    </section>
 
-<h3>
-Vintage Place Function Hall
-</h3>
 
-<p class="map-address">
-9V44+R6G, beside Ascent Public School,
-Ring Road, Malgathi,
-Kalaburagi, Karnataka 585104, India
-</p>
+    <!-- FOOTER -->
 
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=9V44%2BR6G%2C%20beside%20Ascent%20Public%20School%2C%20Ring%20Road%2C%20Malgathi%2C%20Kalaburagi%2C%20Karnataka%20585104%2C%20India">
-Open Google Maps
-</a>
+    <footer>
 
-</div>
+      <h2>Rizwan &amp; Nibla</h2>
 
-</section>
+      <p>
+        With love and duas • Walima 2027
+      </p>
 
+    </footer>
 
-<!-- =========================
-     RSVP
-========================= -->
+  </div>
 
-<section id="rsvp" class="rsvp-section">
 
-<div class="rsvp-container">
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
 
-<h2 class="section-title">
-RSVP
-</h2>
+  <script>
 
-<p class="section-subtitle">
-We would love to celebrate with you
-</p>
+    /* OPEN INVITATION */
 
-<form class="rsvp-form" id="rsvpForm">
+    function openInvitation() {
 
-<input
-type="text"
-name="name"
-placeholder="Full Name"
-required
->
+      document.getElementById("opening").classList.add("hide");
 
-<select name="attendance" required>
+      const music = document.getElementById("weddingMusic");
 
-<option value="">
-Will you attend?
-</option>
+      music.play().then(() => {
 
-<option value="yes">
-Yes, happily! ❤️
-</option>
+        document.getElementById("musicButton").innerHTML = "🔊";
 
-<option value="no">
-Sorry, I can't attend
-</option>
+      }).catch(() => {
 
-</select>
+        document.getElementById("musicButton").innerHTML = "🎵";
 
+      });
 
-<input
-type="number"
-name="guests"
-min="1"
-max="20"
-placeholder="Number of Guests"
-required
->
-
-
-<input
-type="tel"
-name="phone"
-placeholder="Phone / WhatsApp Number"
->
-
-
-<textarea
-name="message"
-placeholder="Leave a message for Rizwan & Nibla..."
-></textarea>
-
-
-<button
-type="submit"
-class="rsvp-button">
-Send RSVP
-</button>
-
-</form>
-
-<div id="success" class="success-message">
-
-<h3>Thank You! ❤️</h3>
-
-<p>
-Your response has been received.
-We look forward to celebrating with you!
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-<div class="footer-names">
-Rizwan & Nibla
-</div>
-
-<div>
-15 • 03 • 2027
-</div>
-
-<br>
-
-<div class="footer-small">
-With love, happiness and blessings
-</div>
-
-<div class="footer-small">
-Kalaburagi, Karnataka, India
-</div>
-
-</footer>
-
-
-<script>
-
-/* =========================
-   COUNTDOWN
-========================= */
-
-/*
-   Wedding:
-   15 March 2027
-   7:00 PM
-   India Standard Time (UTC+5:30)
-*/
-
-const weddingDate =
-new Date("2027-03-15T19:00:00+05:30").getTime();
-
-
-function updateCountdown() {
-
-const now = new Date().getTime();
-
-const difference = weddingDate - now;
-
-
-if (difference <= 0) {
-
-document.getElementById("days").innerText = "0";
-document.getElementById("hours").innerText = "0";
-document.getElementById("minutes").innerText = "0";
-document.getElementById("seconds").innerText = "0";
-
-return;
-
-}
-
-
-const days =
-Math.floor(difference / (1000 * 60 * 60 * 24));
-
-const hours =
-Math.floor(
-(difference % (1000 * 60 * 60 * 24))
-/ (1000 * 60 * 60)
-);
-
-const minutes =
-Math.floor(
-(difference % (1000 * 60 * 60))
-/ (1000 * 60)
-);
-
-const seconds =
-Math.floor(
-(difference % (1000 * 60))
-/ 1000
-);
-
-
-document.getElementById("days").innerText = days;
-
-document.getElementById("hours").innerText =
-String(hours).padStart(2,"0");
-
-document.getElementById("minutes").innerText =
-String(minutes).padStart(2,"0");
-
-document.getElementById("seconds").innerText =
-String(seconds).padStart(2,"0");
-
-}
-
-
-updateCountdown();
-
-setInterval(updateCountdown,1000);
-
-
-/* =========================
-   RSVP DEMO
-========================= */
-
-document
-.getElementById("rsvpForm")
-.addEventListener("submit", function(event) {
-
-event.preventDefault();
-
-document.getElementById("success").style.display =
-"block";
-
-this.reset();
-
-window.scrollTo({
-top: document.getElementById("success").offsetTop - 150,
-behavior: "smooth"
-});
-
-});
-    </script>
-/* =========================
-   WEDDING MUSIC
-========================= */
-
-const music = document.getElementById("weddingMusic");
-const musicButton = document.getElementById("musicButton");
-
-let musicStarted = false;
-
-function startWeddingMusic() {
-
-    if (!musicStarted) {
-
-        music.volume = 0.5;
-
-        music.play()
-        .then(() => {
-            musicStarted = true;
-            musicButton.innerText = "🔊";
-        })
-        .catch(() => {
-            // Browser blocked autoplay
-        });
     }
-}
 
-/* Start music after the visitor's first interaction */
-document.addEventListener("click", startWeddingMusic, {
-    once: true
-});
 
-/* Play / Pause button */
-musicButton.addEventListener("click", function(event) {
+    /* MUSIC */
 
-    event.stopPropagation();
+    function toggleMusic() {
 
-    if (music.paused) {
+      const music = document.getElementById("weddingMusic");
+      const button = document.getElementById("musicButton");
+
+      if (music.paused) {
 
         music.play();
 
-        musicButton.innerText = "🔊";
+        button.innerHTML = "🔊";
 
-    } else {
+      } else {
 
         music.pause();
 
-        musicButton.innerText = "🔇";
+        button.innerHTML = "🎵";
+
+      }
+
     }
-});
-</script>
+
+
+    /* COUNTDOWN */
+
+    const weddingDate =
+      new Date("March 15, 2027 19:00:00").getTime();
+
+
+    function updateCountdown() {
+
+      const now = new Date().getTime();
+
+      const distance = weddingDate - now;
+
+
+      if (distance <= 0) {
+
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+
+        return;
+
+      }
+
+
+      const days =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      const hours =
+        Math.floor(
+          (distance % (1000 * 60 * 60 * 24))
+          / (1000 * 60 * 60)
+        );
+
+      const minutes =
+        Math.floor(
+          (distance % (1000 * 60 * 60))
+          / (1000 * 60)
+        );
+
+      const seconds =
+        Math.floor(
+          (distance % (1000 * 60))
+          / 1000
+        );
+
+
+      document.getElementById("days").innerHTML =
+        String(days).padStart(2, "0");
+
+      document.getElementById("hours").innerHTML =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes").innerHTML =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds").innerHTML =
+        String(seconds).padStart(2, "0");
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+  </script>
 
 </body>
 </html>
