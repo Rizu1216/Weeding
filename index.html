@@ -1650,6 +1650,303 @@ body::after{opacity:.08;background-size:90px 90px;}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}
 }
 
+
+/* =========================================================
+   CINEMATIC FILM-STYLE EXPERIENCE — SECOND EDITION
+   ========================================================= */
+
+/* opening cinematic typography */
+.cinema-line{
+  max-width:520px;
+  margin:0 auto 25px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px;
+  line-height:1.55;
+  font-style:italic;
+  letter-spacing:.7px;
+  color:rgba(239,215,157,.82);
+  opacity:0;
+  animation:cinemaFade 1.8s .6s forwards;
+}
+.story-prelude{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;
+  font-style:italic;
+  color:#d9c486;
+  margin-bottom:8px;
+  opacity:0;
+  animation:cinemaFade 1.4s 1.2s forwards;
+}
+.filmy-tagline{
+  margin:25px auto 0;
+  max-width:500px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:19px;
+  font-style:italic;
+  line-height:1.5;
+  color:#e3cb8d;
+  opacity:.9;
+}
+@keyframes cinemaFade{
+  from{opacity:0;transform:translateY(16px);filter:blur(4px)}
+  to{opacity:1;transform:none;filter:blur(0)}
+}
+
+/* REALISTIC / DEEPER ENVELOPE */
+.envelope-area{
+  width:430px;
+  height:305px;
+  perspective:1800px;
+  transform-style:preserve-3d;
+  animation:cinematicFloat 5s cubic-bezier(.45,.05,.55,.95) infinite;
+}
+.envelope{
+  transform-style:preserve-3d;
+  transition:transform 1.2s cubic-bezier(.2,.75,.2,1);
+}
+.envelope-area::before{
+  content:"";
+  position:absolute;
+  left:7%;
+  right:7%;
+  bottom:-25px;
+  height:38px;
+  border-radius:50%;
+  background:rgba(0,0,0,.65);
+  filter:blur(20px);
+  transform:translateZ(-20px);
+}
+@keyframes cinematicFloat{
+  0%,100%{transform:translateY(0) rotateX(0deg) rotateY(0deg)}
+  25%{transform:translateY(-6px) rotateY(-1.2deg)}
+  50%{transform:translateY(-12px) rotateX(1deg) rotateY(1.2deg)}
+  75%{transform:translateY(-5px) rotateY(-.7deg)}
+}
+
+/* Paper depth */
+.envelope-back{
+  transform:translateZ(0);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.06),
+    inset 0 -35px 55px rgba(0,0,0,.18),
+    0 20px 45px rgba(0,0,0,.38);
+}
+.envelope-left,.envelope-right,.envelope-bottom{
+  transform-style:preserve-3d;
+  box-shadow:inset 0 0 30px rgba(0,0,0,.13);
+}
+.envelope-left{transform-origin:left center}
+.envelope-right{transform-origin:right center}
+.envelope-bottom{transform-origin:center bottom}
+
+/* flap is now a genuine 3D hinge */
+.envelope-flap{
+  transform-origin:50% 0%;
+  backface-visibility:hidden;
+  transform-style:preserve-3d;
+  box-shadow:
+    inset 0 -2px 0 rgba(255,255,255,.06),
+    0 12px 20px rgba(0,0,0,.2);
+}
+.envelope-flap::after{
+  content:"";
+  position:absolute;
+  left:50%;top:45%;
+  width:150px;height:150px;
+  transform:translate(-50%,-50%) rotate(45deg);
+  border:1px solid rgba(239,211,143,.07);
+  pointer-events:none;
+}
+
+/* letter rises dramatically */
+.letter{
+  transform:translateZ(12px);
+  transform-style:preserve-3d;
+}
+.letter::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.32) 48%,transparent 58%);
+  transform:translateX(-130%);
+  animation:paperSheen 4.5s 1s infinite;
+  pointer-events:none;
+}
+@keyframes paperSheen{
+  0%,55%{transform:translateX(-130%)}
+  78%,100%{transform:translateX(130%)}
+}
+
+/* dramatic opening state */
+.envelope.open .envelope-flap{
+  transform:rotateX(180deg);
+  box-shadow:0 -10px 25px rgba(0,0,0,.22);
+}
+.envelope.open .letter{
+  top:-145px;
+  transform:translateZ(30px) rotateX(1deg) scale(1.16);
+  box-shadow:0 28px 70px rgba(0,0,0,.5);
+}
+.envelope.open .envelope-left{
+  transform:rotateY(-3deg) translateX(-5px);
+}
+.envelope.open .envelope-right{
+  transform:rotateY(3deg) translateX(5px);
+}
+.envelope.open .envelope-bottom{
+  transform:rotateX(3deg) translateY(4px);
+}
+
+/* wax seal: embossed medallion */
+.wax-seal{
+  width:90px;height:90px;
+  transform-style:preserve-3d;
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.58),
+    0 0 35px rgba(231,200,120,.22),
+    inset 2px 3px 5px rgba(255,255,255,.42),
+    inset -5px -6px 10px rgba(65,42,10,.38);
+}
+.wax-seal::before{
+  text-shadow:1px 2px 1px rgba(255,255,255,.22),-1px -1px 1px rgba(0,0,0,.25);
+  box-shadow:inset 2px 2px 3px rgba(255,255,255,.22),inset -2px -2px 4px rgba(0,0,0,.2);
+}
+.wax-seal::after{
+  content:"";
+  position:absolute;
+  inset:-13px;
+  border:1px dashed rgba(239,211,143,.35);
+  border-radius:50%;
+  animation:sealOrbit 7s linear infinite;
+}
+@keyframes sealOrbit{to{transform:rotate(360deg)}}
+
+/* film grain + spotlight */
+#opening::after{
+  content:"";
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse at center,transparent 25%,rgba(0,0,0,.38) 100%),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 4px);
+  mix-blend-mode:screen;
+  opacity:.55;
+}
+.opening-content{filter:drop-shadow(0 8px 25px rgba(0,0,0,.3))}
+
+/* story sections */
+.story-chapter{
+  max-width:680px;
+  margin:15px auto 70px;
+  padding:58px 25px;
+  text-align:center;
+  position:relative;
+  border-top:1px solid rgba(231,200,120,.18);
+  border-bottom:1px solid rgba(231,200,120,.18);
+}
+.story-chapter::before,.story-chapter::after{
+  content:"✦";
+  position:absolute;
+  top:50%;
+  color:#d9bb70;
+  font-size:12px;
+  transform:translateY(-50%);
+}
+.story-chapter::before{left:4px}
+.story-chapter::after{right:4px}
+.chapter-kicker{
+  font-size:9px;
+  letter-spacing:5px;
+  color:#9e9475;
+  margin-bottom:14px;
+}
+.chapter-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:37px;
+  color:#e5ce93;
+  margin-bottom:15px;
+}
+.story-chapter p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:19px;
+  line-height:1.7;
+  font-style:italic;
+  color:#c8bea1;
+}
+
+/* cinematic chapter card */
+.cinematic-story{
+  max-width:760px;
+  margin:0 auto 70px;
+  padding:0 15px;
+}
+.film-frame{
+  position:relative;
+  min-height:260px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:45px 30px;
+  border:1px solid rgba(231,200,120,.28);
+  background:
+    radial-gradient(circle at 50% 45%,rgba(231,200,120,.08),transparent 45%),
+    linear-gradient(135deg,rgba(255,255,255,.025),rgba(0,0,0,.18));
+  box-shadow:0 25px 65px rgba(0,0,0,.28);
+  overflow:hidden;
+}
+.film-frame::before,.film-frame::after{
+  content:"";
+  position:absolute;
+  width:60px;height:60px;
+  border-color:rgba(231,200,120,.55);
+}
+.film-frame::before{
+  left:12px;top:12px;border-left:1px solid;border-top:1px solid;
+}
+.film-frame::after{
+  right:12px;bottom:12px;border-right:1px solid;border-bottom:1px solid;
+}
+.film-label{
+  font-size:8px;
+  letter-spacing:5px;
+  color:#988d6d;
+  margin-bottom:24px;
+}
+.film-quote{
+  font-family:'Cormorant Garamond',serif;
+  font-size:31px;
+  line-height:1.25;
+  color:#e7d29b;
+  font-style:italic;
+}
+.film-line{
+  width:80px;height:1px;
+  margin:25px 0 17px;
+  background:linear-gradient(90deg,transparent,#d9bb70,transparent);
+}
+.film-caption{
+  font-size:10px;
+  letter-spacing:1.5px;
+  color:#a9a18a;
+}
+
+/* mobile */
+@media(max-width:650px){
+  .envelope-area{width:335px;height:240px}
+  .envelope.open .letter{top:-100px;transform:translateZ(25px) scale(1.09)}
+  .cinema-line{font-size:15px}
+  .chapter-title{font-size:31px}
+  .story-chapter p{font-size:17px}
+  .film-quote{font-size:25px}
+}
+@media(max-width:380px){
+  .envelope-area{width:290px;height:208px}
+  .envelope.open .letter{top:-85px}
+  .film-frame{min-height:235px;padding:35px 20px}
+  .film-quote{font-size:23px}
+}
+
 </style>
 </head>
 
@@ -1699,6 +1996,8 @@ body::after{opacity:.08;background-size:90px 90px;}
 A Special Invitation For You
 
 </div>
+
+<div class="cinema-line">“Some stories are written in the stars…<br>ours was written in two hearts.”</div>
 
 
 <div class="envelope-area">
@@ -1767,6 +2066,8 @@ onclick="openInvitation()">
 
 </div>
 
+
+<div class="story-prelude">A story that began with a promise…</div>
 
 <div class="open-instruction">
 
@@ -1885,6 +2186,8 @@ WALIMA CELEBRATION
 
 </div>
 
+<div class="filmy-tagline">“Two years of waiting. A lifetime of forever.”</div>
+
 
 <p class="hero-description">
 
@@ -1910,6 +2213,12 @@ beginning together with our family and loved ones.
 <!-- ================================================= -->
 <!-- SCRATCH CARD -->
 <!-- ================================================= -->
+
+<section class="story-chapter">
+<div class="chapter-kicker">OUR STORY</div>
+<div class="chapter-title">From “Yes” to “Forever”</div>
+<p>“We took our first step together a year ago…<br>and now, it is time to celebrate the beginning of forever.”</p>
+</section>
 
 <section class="scratch-section">
 
@@ -1981,6 +2290,19 @@ Scratch Here ✦
 </section>
 
 
+
+<!-- ================================================= -->
+<!-- CINEMATIC STORY -->
+<!-- ================================================= -->
+
+<section class="cinematic-story">
+  <div class="film-frame">
+    <span class="film-label">CHAPTER • ONE</span>
+    <div class="film-quote">“The engagement was the beginning.<br>The wedding is the next scene.”</div>
+    <div class="film-line"></div>
+    <span class="film-caption">And the best part of our story is yet to be written.</span>
+  </div>
+</section>
 
 <!-- ================================================= -->
 <!-- DETAILS -->
