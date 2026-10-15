@@ -20,7 +20,6 @@ content="Wedding invitation of Rizwan Ansari - 15 March 2027">
 }
 
 html{
-    scroll-behavior:smooth;
 }
 
 body{
@@ -1635,6 +1634,27 @@ body::after{opacity:.08;background-size:90px 90px;}
 }
 @keyframes contentRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 
+
+
+/* Cinematic scroll focus: text softly blurs out of view and dramatically sharpens on entry */
+.scroll-focus{
+  opacity:.32;
+  filter:blur(9px);
+  transform:translateY(22px) scale(.985);
+  transition:opacity .85s cubic-bezier(.2,.75,.2,1),
+             filter .95s cubic-bezier(.2,.75,.2,1),
+             transform .95s cubic-bezier(.2,.75,.2,1);
+  will-change:opacity,filter,transform;
+}
+.scroll-focus.scroll-focused{
+  opacity:1;
+  filter:blur(0);
+  transform:translateY(0) scale(1);
+}
+@media(prefers-reduced-motion:reduce){
+  .scroll-focus,.scroll-focus.scroll-focused{opacity:1;filter:none;transform:none;transition:none;will-change:auto}
+}
+
 /* responsive */
 @media(max-width:650px){
   .envelope-area{width:320px;height:232px}
@@ -1667,15 +1687,6 @@ body::after{opacity:.08;background-size:90px 90px;}
   color:rgba(239,215,157,.82);
   opacity:0;
   animation:cinemaFade 1.8s .6s forwards;
-}
-.story-prelude{
-  font-family:'Cormorant Garamond',serif;
-  font-size:16px;
-  font-style:italic;
-  color:#d9c486;
-  margin-bottom:8px;
-  opacity:0;
-  animation:cinemaFade 1.4s 1.2s forwards;
 }
 .filmy-tagline{
   margin:25px auto 0;
@@ -1832,104 +1843,6 @@ body::after{opacity:.08;background-size:90px 90px;}
   opacity:.55;
 }
 .opening-content{filter:drop-shadow(0 8px 25px rgba(0,0,0,.3))}
-
-/* story sections */
-.story-chapter{
-  max-width:680px;
-  margin:15px auto 70px;
-  padding:58px 25px;
-  text-align:center;
-  position:relative;
-  border-top:1px solid rgba(231,200,120,.18);
-  border-bottom:1px solid rgba(231,200,120,.18);
-}
-.story-chapter::before,.story-chapter::after{
-  content:"✦";
-  position:absolute;
-  top:50%;
-  color:#d9bb70;
-  font-size:12px;
-  transform:translateY(-50%);
-}
-.story-chapter::before{left:4px}
-.story-chapter::after{right:4px}
-.chapter-kicker{
-  font-size:9px;
-  letter-spacing:5px;
-  color:#9e9475;
-  margin-bottom:14px;
-}
-.chapter-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:37px;
-  color:#e5ce93;
-  margin-bottom:15px;
-}
-.story-chapter p{
-  font-family:'Cormorant Garamond',serif;
-  font-size:19px;
-  line-height:1.7;
-  font-style:italic;
-  color:#c8bea1;
-}
-
-/* cinematic chapter card */
-.cinematic-story{
-  max-width:760px;
-  margin:0 auto 70px;
-  padding:0 15px;
-}
-.film-frame{
-  position:relative;
-  min-height:260px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:45px 30px;
-  border:1px solid rgba(231,200,120,.28);
-  background:
-    radial-gradient(circle at 50% 45%,rgba(231,200,120,.08),transparent 45%),
-    linear-gradient(135deg,rgba(255,255,255,.025),rgba(0,0,0,.18));
-  box-shadow:0 25px 65px rgba(0,0,0,.28);
-  overflow:hidden;
-}
-.film-frame::before,.film-frame::after{
-  content:"";
-  position:absolute;
-  width:60px;height:60px;
-  border-color:rgba(231,200,120,.55);
-}
-.film-frame::before{
-  left:12px;top:12px;border-left:1px solid;border-top:1px solid;
-}
-.film-frame::after{
-  right:12px;bottom:12px;border-right:1px solid;border-bottom:1px solid;
-}
-.film-label{
-  font-size:8px;
-  letter-spacing:5px;
-  color:#988d6d;
-  margin-bottom:24px;
-}
-.film-quote{
-  font-family:'Cormorant Garamond',serif;
-  font-size:31px;
-  line-height:1.25;
-  color:#e7d29b;
-  font-style:italic;
-}
-.film-line{
-  width:80px;height:1px;
-  margin:25px 0 17px;
-  background:linear-gradient(90deg,transparent,#d9bb70,transparent);
-}
-.film-caption{
-  font-size:10px;
-  letter-spacing:1.5px;
-  color:#a9a18a;
-}
 
 /* mobile */
 @media(max-width:650px){
@@ -2149,6 +2062,138 @@ body::after{opacity:.08;background-size:90px 90px;}
   }
 }
 
+
+
+/* FINAL POLISH: Roman-English Sufi section + luxury portrait envelope */
+.sufi-heading,
+.sufi-line,
+.sufi-title,
+.sufi-location,
+.sufi-bismillah{
+  font-family:'Cormorant Garamond','Georgia',serif;
+  direction:ltr;
+  text-align:center;
+  unicode-bidi:plaintext;
+}
+.sufi-heading{font-size:clamp(18px,2.2vw,24px);font-weight:600;letter-spacing:.45px;line-height:1.6}
+.sufi-line{font-size:clamp(17px,2vw,21px);line-height:1.65;letter-spacing:.2px}
+.sufi-title{font-size:clamp(18px,2.1vw,22px)}
+.sufi-location{font-size:16px;letter-spacing:1.1px}
+.sufi-bismillah{font-size:24px;letter-spacing:1.2px;direction:ltr}
+
+/* Tall, portrait-format invitation envelope */
+.envelope-area{
+  width:min(78vw,330px) !important;
+  height:min(100vw,405px) !important;
+  min-height:340px;
+  margin:8px auto 38px;
+  perspective:2200px;
+  filter:drop-shadow(0 28px 35px rgba(0,0,0,.35));
+}
+.envelope{
+  border-radius:9px;
+  overflow:visible;
+  filter:drop-shadow(0 20px 28px rgba(0,0,0,.42));
+}
+.envelope-back{
+  border:1px solid rgba(245,218,147,.9) !important;
+  border-radius:8px;
+  background:
+    radial-gradient(ellipse at 50% 15%,rgba(213,174,83,.24),transparent 52%),
+    linear-gradient(145deg,#17644a 0%,#0b3b2d 42%,#05251d 100%) !important;
+  box-shadow:inset 0 0 0 5px rgba(228,194,112,.09),inset 0 0 0 9px rgba(228,194,112,.2),inset 0 -40px 70px rgba(0,0,0,.2),0 22px 45px rgba(0,0,0,.36) !important;
+}
+.envelope-area::after{
+  content:"✦  R · N  ✦";
+  position:absolute;
+  z-index:10;
+  left:50%;
+  bottom:19px;
+  transform:translateX(-50%);
+  color:rgba(239,211,143,.72);
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;
+  letter-spacing:4px;
+  pointer-events:none;
+  text-shadow:0 1px 8px rgba(0,0,0,.5);
+}
+.envelope-gold-line{
+  inset:11px !important;
+  border:1px solid rgba(242,211,139,.62) !important;
+  outline:1px solid rgba(242,211,139,.18);
+  outline-offset:5px;
+  border-radius:3px;
+  z-index:9;
+}
+.envelope-gold-line::before,
+.envelope-gold-line::after{
+  content:"❧";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  color:rgba(241,211,139,.75);
+  font-size:27px;
+  line-height:1;
+  text-shadow:0 0 14px rgba(232,196,111,.2);
+}
+.envelope-gold-line::before{top:14px}
+.envelope-gold-line::after{bottom:14px;transform:translateX(-50%) rotate(180deg)}
+.envelope-left,.envelope-right,.envelope-bottom{
+  filter:saturate(1.12);
+}
+.envelope-flap{
+  background:
+    radial-gradient(ellipse at 50% 4%,rgba(230,194,107,.22),transparent 58%),
+    linear-gradient(145deg,#1b6a50 0%,#0d4332 46%,#06271f 100%) !important;
+  filter:drop-shadow(0 7px 8px rgba(0,0,0,.18));
+}
+.envelope-flap::before{
+  content:"";
+  position:absolute;
+  left:50%;top:12%;
+  width:74px;height:74px;
+  transform:translateX(-50%) rotate(45deg);
+  border:1px solid rgba(239,211,143,.34);
+  border-radius:5px;
+  box-shadow:0 0 0 5px rgba(239,211,143,.055),0 0 22px rgba(239,211,143,.08);
+  pointer-events:none;
+}
+.wax-seal{
+  width:78px !important;height:78px !important;
+  border:2px solid #f4dfa1 !important;
+  background:radial-gradient(circle at 30% 24%,#fff0bb 0%,#d9b45b 31%,#a97828 62%,#68451b 100%) !important;
+  box-shadow:0 0 0 5px rgba(224,190,108,.12),0 0 0 9px rgba(224,190,108,.08),0 10px 24px rgba(0,0,0,.55),inset 0 2px 5px rgba(255,255,255,.55),inset 0 -5px 10px rgba(75,43,9,.35) !important;
+}
+.wax-seal::before{
+  width:58px !important;height:58px !important;
+  border:1px solid rgba(53,68,37,.75) !important;
+  font-size:18px !important;
+  letter-spacing:1px;
+  box-shadow:inset 0 0 0 3px rgba(53,68,37,.09);
+}
+.envelope.open .letter{
+  top:-105px !important;
+  transform:translateZ(34px) rotateX(1deg) scale(1.06) !important;
+}
+.opening-title{
+  letter-spacing:3px;
+  text-shadow:0 2px 22px rgba(226,194,119,.18);
+}
+.open-instruction{letter-spacing:2px;text-transform:uppercase;font-size:10px}
+@media(max-width:650px){
+  .envelope-area{width:min(78vw,300px) !important;height:min(104vw,370px) !important;min-height:300px}
+  .envelope-gold-line{inset:9px !important}
+  .envelope-gold-line::before{top:11px}
+  .envelope-gold-line::after{bottom:11px}
+  .wax-seal{width:68px !important;height:68px !important}
+  .wax-seal::before{width:50px !important;height:50px !important;font-size:16px !important}
+  .envelope.open .letter{top:-88px !important;transform:translateZ(28px) scale(1.02) !important}
+  .sufi-bismillah{font-size:21px}
+  .sufi-line{font-size:17px;line-height:1.6}
+  .sufi-heading{font-size:19px;line-height:1.55}
+  .sufi-location{font-size:15px}
+}
+
 </style>
 </head>
 
@@ -2269,7 +2314,7 @@ onclick="openInvitation()">
 </div>
 
 
-<div class="story-prelude">A story that began with a promise…</div>
+
 
 <div class="open-instruction">
 
@@ -2348,39 +2393,39 @@ Rizwan Ansari
   <div class="sufi-ornament">✦</div>
 
   <div class="sufi-bismillah">
-    بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+    Bismillahir Rahmanir Raheem
   </div>
 
   <div class="sufi-heading">
-    زیرِ سرپرستی، مرشدی و مولائی
+    Zer-e-Sarparasti, Murshidi-o-Maulai
   </div>
 
   <div class="sufi-line sufi-title">
-    حضرت پیرِ طریقت، شیخُ المشائخ
+    Hazrat Peer-e-Tariqat, Shaikh-ul-Mashaikh
   </div>
 
   <div class="sufi-line">
-    صوفی خواجہ جمال الدین شاہ قادری چشتی
+    Sufi Khwaja Jamaluddin Shah Qadri Chishti
   </div>
 
   <div class="sufi-line sufi-location">
-    جامع السلاسل، سیڈم
+    Jami-ul-Salasil, Sedam
   </div>
 
   <div class="sufi-divider"></div>
 
   <div class="sufi-line sufi-title">
-    سجادہ نشین حضرت بابا فخرالدین شاہ قادری چشتی
+    Sajjada Nasheen Hazrat Baba Fakhruddin Shah Qadri Chishti
   </div>
 
   <div class="sufi-line sufi-location">
-    جامع السلاسل، چالگیری
+    Jami-ul-Salasil, Chalageri
   </div>
 
   <div class="sufi-divider"></div>
 
   <div class="sufi-heading" style="margin-bottom:12px;">
-    زیرِ صدارت و اہتمام
+    Zer-e-Sadarat-o-Ihtimam
   </div>
 
   <div class="sufi-brother">
@@ -2388,7 +2433,7 @@ Rizwan Ansari
   </div>
 
   <div class="sufi-brother-label">
-    Big Brother
+    Elder Brother
   </div>
 
   <div class="sufi-english">
@@ -2451,9 +2496,6 @@ WALIMA CELEBRATION
 
 </div>
 
-<div class="filmy-tagline">“Two years of waiting. A lifetime of forever.”</div>
-
-
 <p class="hero-description">
 
 With the blessings of Allah, we request the honour
@@ -2478,12 +2520,6 @@ beginning together with our family and loved ones.
 <!-- ================================================= -->
 <!-- SCRATCH CARD -->
 <!-- ================================================= -->
-
-<section class="story-chapter">
-<div class="chapter-kicker">OUR STORY</div>
-<div class="chapter-title">From “Yes” to “Forever”</div>
-<p>“We took our first step together a year ago…<br>and now, it is time to celebrate the beginning of forever.”</p>
-</section>
 
 <section class="scratch-section">
 
@@ -2564,15 +2600,6 @@ Scratch Here ✦
 <!-- ================================================= -->
 <!-- CINEMATIC STORY -->
 <!-- ================================================= -->
-
-<section class="cinematic-story">
-  <div class="film-frame">
-    <span class="film-label">CHAPTER • ONE</span>
-    <div class="film-quote">“The engagement was the beginning.<br>The wedding is the next scene.”</div>
-    <div class="film-line"></div>
-    <span class="film-caption">And the best part of our story is yet to be written.</span>
-  </div>
-</section>
 
 <!-- ================================================= -->
 <!-- DETAILS -->
@@ -2905,46 +2932,6 @@ setTimeout(function(){
 opening.classList.add("hide");
 
 },1800);
-
-
-/* ================================================= */
-/* AUTO SCROLL SPEED = 3.0 */
-/* ================================================= */
-
-setTimeout(function(){
-
-
-let scrollSpeed = 3.0;
-
-
-function autoScroll(){
-
-
-window.scrollBy(
-0,
-scrollSpeed
-);
-
-
-if(
-window.innerHeight +
-window.scrollY <
-document.documentElement.scrollHeight
-){
-
-requestAnimationFrame(
-autoScroll
-);
-
-}
-
-}
-
-
-autoScroll();
-
-
-},3200);
 
 }
 
@@ -3481,6 +3468,35 @@ setupScratchCard
       if(el){ el.style.transition='opacity .55s ease, transform .55s ease'; el.style.opacity='0'; el.style.transform='translateY(8px)';}
     });
   };
+})();
+</script>
+
+
+
+<script>
+/* Scroll-triggered cinematic focus. Text sharpens as it enters view and softly blurs as it leaves. */
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const selectors = [
+    '.hero .bismillah', '.hero h1', '.hero .family-line', '.hero .and',
+    '.hero .subtitle', '.hero .hero-description',
+    '.sufi-section > div', '.scratch-heading', '.reveal-small', '.reveal-date',
+    '.reveal-time', '.reveal-name', '.details .card', '.countdown-title',
+    '.countdown .time-box', '.buttons', '.footer', '.invitation-frame > .divider'
+  ];
+  const targets = document.querySelectorAll(selectors.join(','));
+  targets.forEach(el => el.classList.add('scroll-focus'));
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(el => el.classList.add('scroll-focused'));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('scroll-focused');
+      else entry.target.classList.remove('scroll-focused');
+    });
+  }, { threshold: 0.14, rootMargin: '-7% 0px -7% 0px' });
+  targets.forEach(el => observer.observe(el));
 })();
 </script>
 
